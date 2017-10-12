@@ -1,7 +1,7 @@
 --- 
 author_link: http://www.movabletype.org/
 author_name: Six Apart, Ltd.
-class: website
+class: both
 description: Jungfrau（ユングフラウ） は Movable Type 7 のテーマです。Content Type を利用したサイトの構築を体験いただけます。
 elements: 
   blog_static_files: 
@@ -99,6 +99,27 @@ elements:
           template_727: 
             label: イベント　記事
     importer: template_set
+  default_categoty_sets:
+    importer: default_category_sets
+    data:
+      event_and_seminar:
+        name: イベント・セミナー　カテゴリ
+        categories:
+          event:
+            label: イベント
+          seminar:
+            label: セミナー
+      news:
+        name: ニュース　カテゴリ
+        categories:
+          notices:
+            label: お知らせ
+          events:
+            label: イベント
+          misc:
+            label: その他
+      press_release:
+        name: プレスリリース　カテゴリ
 id: jungfrau
 label: Jungfrau
 name: Jungfrau
