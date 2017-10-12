@@ -120,6 +120,304 @@ elements:
             label: その他
       press_release:
         name: プレスリリース　カテゴリ
+  default_content_types:
+    importer: default_content_types
+    data:
+      - name: Jungfrau ニュース
+        description: ~
+        unique_id: 4b33df534ed5db7b34d571632b63089c3e8556cc
+        user_disp_option: 1
+        fields:
+          - type: single_line_text
+            label: タイトル
+            description:
+            dispalay: force
+            required: 1
+            min_length: ~
+            max_length: ~
+            initial_value: ~
+          - type: multi_line_text
+            label: 本文
+            description: ニュースの本文
+            display: optional
+            input_format: 0
+            required: 0
+            initial_value: ~
+          - type: multi_line_text
+            label: 概要
+            description: ニュースの概要。og:descriptionとしても利用
+            display: optional
+            input_format: 0
+            required: 0
+            initial_value: ~
+          - type: categories
+            label: カテゴリ
+            description: ニュースのカテゴリ
+            display: force
+            required: 0
+            category_set: ニュース　カテゴリ
+          - type: asset_image
+            label: og:image
+            description: ~
+            dispalay: default
+            required: 0
+            multiple: 0
+            allow_upload: 1
+            max: ~
+            min: ~
+      - name: プレスリリース
+        unique_id: 3741516da53a20ba3584a15c88c6a55a9a54d9c6
+        description: ~
+        user_disp_option: 1
+        fields:
+          - type: single_line_text
+            label: タイトル
+            description: ~
+            dispalay: force
+            required: 1
+            min_length: ~
+            max_length: ~
+            initial_value: ~
+          - type: multi_line_text
+            label: 本文
+            description: ~
+            display: optional
+            input_format: 0
+            required: 0
+            initial_value: ~
+          - type: multi_line_text
+            label: 概要
+            description: ~
+            display: optional
+            input_format: 0
+            required: 0
+            initial_value: ~
+          - type: categories
+            label: カテゴリ
+            description: ~
+            display: force
+            required: 0
+            category_set: プレスリリース　カテゴリ
+          - type: asset_image
+            label: og:image
+            description: ~
+            dispalay: default
+            required: 0
+            multiple: 0
+            allow_upload: 1
+            max: ~
+            min: ~
+          - type: asset
+            label: 資料
+            description: ~
+            dispalay: default
+            required: 0
+            multiple: 1
+            allow_upload: 1
+            max: ~
+            min: ~
+          - type: url
+            label: お問い合わせ
+            description: ~
+            initial_value: ~
+      - name: 会場
+        description: ~
+        unique_id: 142b96bf85929c5f191717679506e928c164ec83
+        user_disp_option: 1
+        fields:
+          - type: single_line_text
+            label: 会場名
+            description: ~
+            dispalay: force
+            required: 1
+            min_length: ~
+            max_length: ~
+            initial_value: ~
+          - type: single_line_text
+            label: 住所
+            description: ~
+            dispalay: default
+            required: 0
+            min_length: ~
+            max_length: ~
+            initial_value: ~
+          - type: single_line_text
+            label: アクセス
+            description: ~
+            dispalay: default
+            required: 0
+            min_length: ~
+            max_length: ~
+            initial_value: ~
+      - name: 講師
+        description: ~
+        unique_id: 0c76450131fc7877e69efb43533318735afd81b4
+        user_disp_option: 1
+        fields:
+          - type: single_line_text
+            label: 講師名
+            description: ~
+            dispalay: force
+            required: 1
+            min_length: ~
+            max_length: ~
+            initial_value: ~
+          - type: single_line_text
+            label: 会社名
+            description: ~
+            dispalay: default
+            required: 0
+            min_length: ~
+            max_length: ~
+            initial_value: ~
+          - type: single_line_text
+            label: 役職
+            description: ~
+            dispalay: default
+            required: 0
+            min_length: ~
+            max_length: ~
+            initial_value: ~
+          - type: multi_line_text
+            label: プロフィール
+            description: ~
+            display: optional
+            input_format: 0
+            required: 0
+            initial_value: ~
+          - type: asset_image
+            label: 講師画像
+            description: ~
+            dispalay: default
+            required: 0
+            multiple: 0
+            allow_upload: 1
+            max: ~
+            min: ~
+      - name: イベント・セミナー
+        description: イベント・セミナーの説明。イベント・セミナーの説明。イベント・セミナーの説明。
+        unique_id: e963fb5543533ea801b8f2026702cfa2c12b6f8b
+        user_disp_option: 1
+        fields:
+          - type: single_line_text
+            label: タイトル
+            description: ~
+            dispalay: force
+            required: 1
+            min_length: ~
+            max_length: ~
+            initial_value: ~
+          - type: multi_line_text
+            label: 本文
+            description: ~
+            display: optional
+            input_format: 0
+            required: 0
+            initial_value: ~
+          - type: multi_line_text
+            label: 参加費
+            description: ~
+            display: default
+            input_format: 0
+            required: 0
+            initial_value: ~
+          - type: list
+            label: こんな方におすすめ
+            description: ~
+            display: optional
+            required: 0
+          - type: single_line_text
+            label: 主催
+            description: ~
+            dispalay: default
+            required: 0
+            min_length: ~
+            max_length: ~
+            initial_value: ~
+          - type: multi_line_text
+            label: プログラム
+            description: ~
+            display: optional
+            input_format: 0
+            required: 0
+            initial_value: ~
+          - type: categories
+            label: カテゴリ
+            description: ~
+            display: force
+            required: 0
+            category_set: イベント・セミナー　カテゴリ
+          - type: tags
+            label: タグ
+            description: ~
+            display: optional
+            required: 0
+            multiple: 1
+            can_add: 1
+            min: 0
+            max: 10
+            initial_valuie: ~
+          - type: date_and_time
+            label: 開催日時
+            description: ~
+            display: default
+            required: 0
+            initial_value: ~
+          - type: date_and_time
+            label: 終了日時
+            description: ~
+            display: default
+            required: 0
+            initial_value: ~
+          - type: time_only
+            label: 開場時間
+            description: ~
+            display: default
+            required: 0
+            initial_value: ~
+          - type: single_line_text
+            label: 開催日時メモ
+            description: ~
+            dispalay: optional
+            required: 0
+            min_length: ~
+            max_length: ~
+            initial_value: ~
+          - type: content_type
+            label: 会場
+            description: ~
+            display: default
+            required: 0
+            source: 会場
+            multiple: 0
+            can_add: 0
+          - type: content_type
+            label: 講師
+            description: ~
+            display: default
+            required: 0
+            source: 講師
+            multiple: 1
+            can_add: 1
+            min: 0
+            max: 20
+          - type: number
+            label: 定員
+            description: ~
+            display: default
+            required: 0
+            min_value: ~
+            max_value: ~
+            initial_value: ~
+          - type: asset_image
+            label: og:image
+            description: ~
+            dispalay: default
+            required: 0
+            multiple: 0
+            allow_upload: 1
+            max: ~
+            min: ~
 id: jungfrau
 label: Jungfrau
 name: Jungfrau
