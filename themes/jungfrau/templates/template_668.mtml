@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja" itemscope itemtype="http://schema.org/WebPage">
+<head>
+<meta charset="UTF-8">
+<title><mt:ContentField label="タイトル"><mt:Var name="__value__"encode_html="1"></mt:ContentField> - プレスリリース | <mt:BlogName encode_html="1"></title>
+<meta name="description" content="<mt:ContentField label="概要"><mt:Var name="__value__" encode_html="1"></mt:ContentField>">
+<meta name="keywords" content="Jungfrau,Movable Type,テーマ,CMS,プレスリリース">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<mt:Assets tag="@SITE_FAVICON" limit="1"><link rel="shortcut icon" href="<mt:AssetUrl encode_html="1">"></mt:Assets>
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="<mt:ContentField label="タイトル"><mt:Var name="__value__"encode_html="1"></mt:ContentField> - プレスリリース | <mt:BlogName encode_html="1">">
+<meta property="og:url" content="<mt:ContentPermalink encode_html="1">">
+<meta property="og:description" content="<mt:ContentField label="概要"><mt:Var name="__value__" encode_html="1"></mt:ContentField>">
+<meta property="og:site_name" content="<mt:BlogName encode_html="1">">
+<meta property="og:image" content="<mt:ignore><mt:ContentField label="og:image"><mt:asseturl></mt:ContentField></mt:ignore>">
+<link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css">
+<link rel="stylesheet" href="<mt:BlogURL encode_html="1">css/reset.css">
+<link rel="stylesheet" href="<mt:BlogURL encode_html="1">css/style.css">
+</head>
+
+<body>
+
+<div class="keyvisual">
+  <div class="keyvisual-image">
+    <mt:include module="header">
+    <div class="keyvisual-title keyvisual-title-lower">
+      <h1 class="keyvisual-lower-title">プレスリリース</h1>
+      <p class="keyvisual-title-description text-smaller"><mt:BlogName encode_html="1">のプレスリリースはこちらをご覧ください。</p>
+    </div>
+  </div>
+</div><!-- /.keyvisual -->
+
+<div class="content content-column2 group">
+  <div class="content-main">
+
+    <section class="content-section">
+      <div class="inner">
+        <div class="content-section-box">
+          <div class="inner">
+            <article class="entry">
+              <div class="entry-header group">
+                <div class="entry-date"><mt:ContentCreatedDate format="%Y.%m.%d"></div>
+                <div class="entry-category text-smaller">
+                  <mt:ignore><mt:ContentField label="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category"><mt:categorylabel></a></mt:ContentField></mt:ignore>
+                </div>
+              </div>
+              <h1 class="entry-title"><mt:ContentField label="タイトル"><mt:Var name="__value__"></mt:ContentField></h1>
+            <mt:ignore>
+              <div class="entry-mainimage">
+                <mt:ContentField label="og:image"><img src="<mt:asseturl>" alt="<mt:ContentField label="タイトル"><mt:Var name="__value__"></mt:ContentField>"></mt:ContentField>
+              </div>
+            </mt:ignore>
+              <div class="entry-body">
+                <mt:ContentField label="本文"><mt:Var name="__value__"></mt:ContentField>
+              </div>
+            
+              <div class="entry-bottom-buttons">
+                <mt:ignore><a href="<mt:ContentField label="資料"><mt:AssetURL></mt:ContentField>" class="btn btn-large">資料ダウンロード</a></mt:ignore>
+                <a href="<mt:ContentField label="お問い合わせ"><mt:Var name="__value__"></mt:ContentField>" class="btn btn-large btn-primary">お問い合わせ</a>
+              </div>
+
+              <div class="socialbtns">
+                <mt:Include module="social-buttons">
+              </div>
+
+              <div class="entry-navi group">
+                <mt:ContentPrevious><a href="<mt:ContentPermalink>" class="prev">前の記事</a></mt:ContentPrevious>
+                <mt:ContentNext><a href="<mt:ContentPermalink>" class="next">次の記事</a></mt:ContentNext>
+              </div>
+
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /.content-main -->
+
+  <div class="content-side">
+    <mt:include module="sidemenu-pressrelease">
+  </div><!-- /.content-side -->
+
+</div><!-- /.content -->
+
+<mt:include module="footer">
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="<mt:BlogURL encode_html="1">js/common.js"></script>
+
+</body>
+</html>

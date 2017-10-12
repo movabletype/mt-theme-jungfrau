@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja" itemscope itemtype="http://schema.org/WebPage">
+<head>
+<meta charset="UTF-8">
+<title><mt:ContentField label="タイトル"><mt:Var name="__value__" encode_html="1"></mt:ContentField> - イベント・セミナー | <mt:BlogName encode_html="1"></title>
+<meta name="description" content="<mt:ContentField label="概要"><mt:Var name="__value__" trim_to="120+..." encode_html="1"></mt:ContentField>">
+<meta name="keywords" content="Jungfrau,Movable Type,テーマ,CMS,プレスリリース">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<mt:Assets tag="@SITE_FAVICON" limit="1"><link rel="shortcut icon" href="<mt:AssetUrl encode_html="1">"></mt:Assets>
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="<mt:ContentField label="タイトル"><mt:Var name="__value__" encode_html="1"></mt:ContentField> - イベント・セミナー | <mt:BlogName encode_html="1">">
+<meta property="og:url" content="<mt:ContentPermalink encode_html="1">">
+<meta property="og:description" content="<mt:ContentField label="概要"><mt:Var name="__value__" trim_to="120+..." encode_html="1"></mt:ContentField>">
+<meta property="og:site_name" content="<mt:BlogName encode_html="1">">
+<meta property="og:image" content="<mt:ignore><mt:ContentField label="og:image"><mt:asseturl></mt:ContentField></mt:ignore>">
+<link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css">
+<link rel="stylesheet" href="<mt:BlogURL encode_html="1">css/reset.css">
+<link rel="stylesheet" href="<mt:BlogURL encode_html="1">css/style.css">
+</head>
+
+<body>
+
+<div class="keyvisual">
+  <div class="keyvisual-image">
+    <mt:include module="header">
+    <div class="keyvisual-title keyvisual-title-lower">
+      <h1 class="keyvisual-lower-title">イベント・セミナー</h1>
+      <p class="keyvisual-title-description text-smaller"><mt:BlogName encode_html="1">のイベント・セミナー情報はこちらをご覧ください。</p>
+    </div>
+  </div>
+</div><!-- /.keyvisual -->
+
+<div class="content">
+  <div class="content-main">
+
+    <section class="content-section">
+      <div class="inner">
+        <div class="content-section-box">
+          <div class="inner">
+            <article class="entry">
+              <div class="entry-header group">
+                <div class="entry-date"><mt:ContentCreatedDate format="%Y.%m.%d"></div>
+                <div class="entry-category text-smaller">
+                  <mt:ignore><mt:ContentField label="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category"><mt:categorylabel></a></mt:ContentField></mt:ignore>
+                </div>
+              </div>
+              <h1 class="entry-title entry-title-event"><mt:ContentField label="タイトル"><mt:Var name="__value__"></mt:ContentField></h1>
+              <div class="labels event-labels">
+                <mt:ContentField label="タグ">
+                  <a class="label tag text-xsmaller"><mt:TagName></a>
+                </mt:ContentField>
+              </div>
+              <div class="event-detail group">
+                <div class="entry-body">
+                  <mt:ContentField label="本文"><mt:Var name="__value__"></mt:ContentField>
+                </div>
+                <div class="event-excerpt">
+                  <table>
+                    <tr>
+                      <th>日時</th>
+                      <td><mt:ContentField label="開催日時" format="%Y年%m月%d日（%a）"><mt:Var name="__value__"></mt:ContentField><br>
+                      <mt:ContentField label="開場時間" format="%k:%M"><mt:Var name="__value__"></mt:ContentField> 〜 <mt:ContentField label="終了日時" format="%k:%M"><mt:Var name="__value__"></mt:ContentField>（予定）<br>
+                      <mt:ContentField label="開催日時メモ"><mt:Var name="__value__"></mt:ContentField></td>
+                    </tr>
+                    <tr>
+                      <th>会場</th>
+                      <td>
+                      <mt:ContentField label="会場">
+                        <mt:ContentField label="会場名"><mt:Var name="__value__"></mt:ContentField><br>
+                        <mt:ContentField label="住所"><mt:Var name="__value__"></mt:ContentField>
+                      </mt:ContentField>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>参加費</th>
+                      <td><mt:ContentField label="参加費"><mt:Var name="__value__"></mt:ContentField></td>
+                    </tr>
+                    <tr>
+                      <th>講師</th>
+                      <td>
+                      <mt:ContentField label="講師">
+                        <mt:ContentField label="会社名"><mt:Var name="__value__"></mt:ContentField> <mt:ContentField label="講師名"><mt:Var name="__value__"></mt:ContentField><br>
+                      </mt:ContentField>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>定員</th>
+                      <td><mt:ContentField label="定員"><mt:Var name="__value__"></mt:ContentField>名</td>
+                    </tr>
+                    <tr>
+                      <th>こんな方におすすめ</th>
+                      <td><mt:ContentField label="こんな方におすすめ"><mt:Var name="__value__"><br></mt:ContentField></td>
+                    </tr>
+                    <tr>
+                      <th>主催</th>
+                      <td><mt:ContentField label="主催"><mt:Var name="__value__"></mt:ContentField></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+
+              <div class="event-lecturer">
+                <h2 class="subtitle-with-border"><span>講師紹介</span></h2>
+                <ul class="group">
+                <mt:ContentField label="講師">
+                  <li>
+                    <mt:ignore><mt:ContentField label="講師画像"><figure><img src="<mt:AssetURL>" alt="<mt:ContentField label="講師名"><mt:Var name="__value__"></mt:ContentField>"></figure></mt:ContentField></mt:ignore>
+                    <div class="event-lecturer-detail">
+                      <p class="position"><mt:ContentField label="会社名"><mt:Var name="__value__"></mt:ContentField><br><mt:ContentField label="役職"><mt:Var name="__value__"></mt:ContentField></p>
+                      <p class="name"><mt:ContentField label="講師名"><mt:Var name="__value__"></mt:ContentField></p>
+                      <p class="profile"><mt:ContentField label="プロフィール"><mt:Var name="__value__"></mt:ContentField></p>
+                    </div>
+                  </li>
+                </mt:ContentField>
+                </ul>
+              </div>
+
+              <div class="event-program">
+                <h2 class="subtitle-with-border"><span>プログラム</span></h2>
+                <div class="event-program-list">
+                  <mt:ContentField label="プログラム"><mt:Var name="__value__"></mt:ContentField>
+                </div>
+              </div>
+
+              <div class="socialbtns">
+                <mt:Include module="social-buttons">
+              </div>
+
+              <div class="entry-navi group">
+                <mt:ContentPrevious><a href="<mt:ContentPermalink>" class="prev">前の記事</a></mt:ContentPrevious>
+                <mt:ContentNext><a href="<mt:ContentPermalink>" class="next">次の記事</a></mt:ContentNext>
+              </div>
+
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /.content-main -->
+
+</div><!-- /.content -->
+
+<mt:include module="footer">
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="<mt:BlogURL encode_html="1">js/jquery.matchHeight-min.js"></script>
+<script src="<mt:BlogURL encode_html="1">js/common.js"></script>
+<script>
+  $('.entrylist03-index li').matchHeight();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard">
+<head>
+
+
+<mt:If name="comment_confirmation">
+    <mt:Ignore><!-- Success message when comment has been submitted --></mt:Ignore>
+    <$mt:Var name="page_title" value="確認"$>
+    <$mt:Var name="message" value="<p>コメントを投稿しました。</p>"$>
+<mt:Else name="comment_pending">
+    <mt:Ignore><!-- Pending message when comment is being held for review --></mt:Ignore>
+    <$mt:Var name="page_title" value="コメントありがとうございます。"$>
+    <$mt:Var name="message" value="<p>コメントは現在承認されるまで公開を保留されています。</p>"$>
+<mt:Else name="comment_error">
+    <mt:Ignore><!-- Error message when comment submission fails --></mt:Ignore>
+    <$mt:Var name="page_title" value="コメント投稿エラー"$>
+    <mt:SetVarBlock name="message"><p>コメントを投稿できませんでした。エラー: <$mt:ErrorMessage encode_html="1"$></p></mt:SetVarBlock>
+</mt:If>
+
+
+    <$mt:Include module="HTMLヘッダー"$>
+    <title><$mt:BlogName encode_html="1"$>: <$mt:Var name="page_title"$></title>
+</head>
+<body id="<$mt:WebsiteThemeID$>" class="<$mt:Var name="body_class"$> <$mt:Var name="page_layout"$>">
+    <div id="container">
+        <div id="container-inner">
+
+
+            <$mt:Include module="バナーヘッダー"$>
+
+
+            <div id="content">
+                <div id="content-inner">
+
+
+                    <div id="alpha">
+                        <div id="alpha-inner">
+                            <h1 id="page-title"><$mt:Var name="page_title"$></h1>
+                            <$mt:Var name="message"$>
+                            <p>
+                            <mt:If name="comment_error">
+                                <a href="javascript:history.back()">戻る</a>
+                            <mt:Else>
+                                <a href="<$mt:EntryLink$>">元の記事</a>に戻る
+                            </mt:If>
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <$mt:Include module="サイドバー"$>
+
+
+                </div>
+            </div>
+
+
+            <$mt:Include module="バナーフッター"$>
+
+
+        </div>
+    </div>
+</body>
+</html>

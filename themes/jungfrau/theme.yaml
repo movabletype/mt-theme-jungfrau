@@ -1,0 +1,105 @@
+--- 
+author_link: http://www.movabletype.org/
+author_name: Six Apart, Ltd.
+class: website
+description: Jungfrau（ユングフラウ） は Movable Type 7 のテーマです。Content Type を利用したサイトの構築を体験いただけます。
+elements: 
+  blog_static_files: 
+    component: ~
+    data: 
+      - images
+    importer: blog_static_files
+  template_set: 
+    component: ~
+    data: 
+      base_path: templates
+      label: exported_template set
+      templates: 
+        index: 
+          main_index: 
+            label: TOP
+            outfile: index.html
+            rebuild_me: 1
+          styles: 
+            label: style.css
+            outfile: css/style.css
+            rebuild_me: 1
+          template_451: 
+            label: common.js
+            outfile: js/common.js
+            rebuild_me: 1
+          template_452: 
+            label: jquery.matchHeight-min.js
+            outfile: js/jquery.matchHeight-min.js
+            rebuild_me: 1
+          template_454: 
+            label: reset.css
+            outfile: css/reset.css
+            rebuild_me: 1
+          template_455: 
+            label: ニュース TOP
+            outfile: news/index.html
+            rebuild_me: 1
+          template_667: 
+            label: プレスリリース　TOP
+            outfile: pressrelease/index.html
+            rebuild_me: 1
+          template_672: 
+            label: イベント・セミナー　TOP
+            outfile: event/index.html
+            rebuild_me: 1
+        module: 
+          template_448: 
+            label: footer
+          template_449: 
+            label: header
+          template_450: 
+            label: sidemenu-news
+          template_660: 
+            label: social-buttons
+          template_670: 
+            label: sidemenu-pressrelease
+        page: 
+          template_731: 
+            label: ウェブページ
+            mappings: 
+              page: 
+                archive_type: Page
+                file_template: "%-c/%-f"
+                preferred: 1
+        system: 
+          comment_listing: 
+            label: コメント一覧
+          comment_preview: 
+            label: コメントプレビュー
+          comment_response: 
+            label: コメント完了
+          dynamic_error: 
+            label: ダイナミックパブリッシングエラー
+          popup_image: 
+            label: ポップアップ画像
+          search_results: 
+            label: 検索結果
+          template_603: 
+            label: ニュース　カテゴリ
+          template_604: 
+            label: ニュース　年別
+          template_659: 
+            label: ニュース　記事
+          template_668: 
+            label: プレスリリース　記事
+          template_669: 
+            label: プレスリリース　カテゴリ
+          template_671: 
+            label: プレスリリース　年別
+          template_725: 
+            label: イベント・セミナー　カテゴリ
+          template_726: 
+            label: イベント・セミナー　年別
+          template_727: 
+            label: イベント　記事
+    importer: template_set
+id: jungfrau
+label: Jungfrau
+name: Jungfrau
+version: '0.01'
