@@ -3,6 +3,9 @@ author_link: http://www.movabletype.org/
 author_name: Six Apart, Ltd.
 class: both
 description: Jungfrau（ユングフラウ） は Movable Type 7 のテーマです。Content Type を利用したサイトの構築を体験いただけます。
+thumbnail_file: 'thumb.png'
+thumbnail_file_medium: 'thumb-medium.png'
+thumbnail_file_small: 'thumb-small.png'
 elements: 
   blog_static_files: 
     component: ~
