@@ -195,7 +195,6 @@ elements:
     data:
       - name: Jungfrau ニュース
         description: ~
-        unique_id: 4b33df534ed5db7b34d571632b63089c3e8556cc
         user_disp_option: 1
         fields:
           - type: single_line_text
@@ -236,7 +235,6 @@ elements:
             max: ~
             min: ~
       - name: プレスリリース
-        unique_id: 3741516da53a20ba3584a15c88c6a55a9a54d9c6
         description: ~
         user_disp_option: 1
         fields:
@@ -292,7 +290,6 @@ elements:
             initial_value: ~
       - name: 会場
         description: ~
-        unique_id: 142b96bf85929c5f191717679506e928c164ec83
         user_disp_option: 1
         fields:
           - type: single_line_text
@@ -321,7 +318,6 @@ elements:
             initial_value: ~
       - name: 講師
         description: ~
-        unique_id: 0c76450131fc7877e69efb43533318735afd81b4
         user_disp_option: 1
         fields:
           - type: single_line_text
@@ -366,7 +362,6 @@ elements:
             min: ~
       - name: イベント・セミナー
         description: イベント・セミナーの説明。イベント・セミナーの説明。イベント・セミナーの説明。
-        unique_id: e963fb5543533ea801b8f2026702cfa2c12b6f8b
         user_disp_option: 1
         fields:
           - type: single_line_text
