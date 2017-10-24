@@ -2,31 +2,31 @@
 <html lang="ja" itemscope itemtype="http://schema.org/WebPage">
 <head>
 <meta charset="UTF-8">
-<title><mt:BlogName encode_html="1"></title>
-<meta name="description" content="<mt:BlogDescription remove_html="1" encode_html="1" strip_linefeeds="1">">
+<title><mt:SiteName encode_html="1"></title>
+<meta name="description" content="<mt:SiteDescription remove_html="1" encode_html="1" strip_linefeeds="1">">
 <meta name="keywords" content="Jungfrau,Movable Type,テーマ,CMS">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <mt:Assets tag="@SITE_FAVICON" limit="1"><link rel="shortcut icon" href="<mt:AssetUrl encode_html="1">"></mt:Assets>
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:title" content="<mt:BlogName encode_html="1">">
-<meta property="og:url" content="<mt:BlogURL encode_html="1">">
-<meta property="og:description" content="<mt:BlogDescription remove_html="1" encode_html="1" strip_linefeeds="1">">
-<meta property="og:site_name" content="<mt:BlogName encode_html="1">">
+<meta property="og:title" content="<mt:SiteName encode_html="1">">
+<meta property="og:url" content="<mt:SiteURL encode_html="1">">
+<meta property="og:description" content="<mt:SiteDescription remove_html="1" encode_html="1" strip_linefeeds="1">">
+<meta property="og:site_name" content="<mt:SiteName encode_html="1">">
 <mt:Assets type="image" tag="@OG_IMAGE" limit="1"><meta property="og:image" content="<mt:AssetUrl encode_html="1">"></mt:Assets>
 <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css">
-<link rel="stylesheet" href="<mt:BlogURL encode_html="1">css/reset.css">
-<link rel="stylesheet" href="<mt:BlogURL encode_html="1">css/style.css">
+<link rel="stylesheet" href="<mt:SiteURL encode_html="1">css/reset.css">
+<link rel="stylesheet" href="<mt:SiteURL encode_html="1">css/style.css">
 </head>
 
 <body>
 
 <div class="keyvisual">
   <div class="keyvisual-image">
-    <mt:include module="header">
+    <mt:Include module="header">
     <div class="keyvisual-title keyvisual-title-top">
-      <div class="keyvisual-title-logo"><img src="<mt:BlogURL encode_html="1">images/logo.png" alt="Jungfrau"></div>
-      <p class="keyvisual-title-description text-smaller"><mt:BlogDescription></p>
+      <div class="keyvisual-title-logo"><img src="<mt:SiteURL encode_html="1">images/logo.png" alt="Jungfrau"></div>
+      <p class="keyvisual-title-description text-smaller"><mt:SiteDescription></p>
     </div>
   </div>
 </div><!-- /.keyvisual -->
@@ -34,7 +34,7 @@
 <div class="content">
   <div class="content-main">
 
-  <mt:Contents type="4b33df534ed5db7b34d571632b63089c3e8556cc" lastn="5">
+  <mt:Contents name="Jungfrau ニュース" lastn="5">
   <mt:ContentsHeader>
     <section class="content-section">
       <div class="inner">
@@ -50,7 +50,7 @@
                 <li>
                   <div class="entry-date text-smaller"><mt:ContentDate format="%Y.%m.%d"></div>
                   <div class="entry-category">
-                    <mt:ContentField label="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:categorylabel></a></mt:ContentField>
+                    <mt:ContentField label="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:CategoryLabel></a></mt:ContentField>
                   </div>
                   <div class="entry-title">
                     <a href="<mt:ContentPermaLink>"><mt:ContentField label="タイトル"><mt:var name="__value__"></mt:ContentField></a>
@@ -60,14 +60,14 @@
               </ul>
             </div>
           </div>
-          <a href="<mt:BlogURL>news/" class="content-section-btn text-smaller">ニュース TOP</a>
+          <a href="<mt:SiteURL>news/" class="content-section-btn text-smaller">ニュース TOP</a>
         </div>
       </div>
     </section>
   </mt:ContentsFooter>
   </mt:Contents>
 
-  <mt:Contents type="3741516da53a20ba3584a15c88c6a55a9a54d9c6" lastn="4">
+  <mt:Contents name="プレスリリース" lastn="4">
   <mt:ContentsHeader>
     <section class="content-section">
       <div class="inner">
@@ -82,11 +82,11 @@
   </mt:ContentsHeader>
                 <li>
                   <figure>
-                    <a href="<mt:ContentPermaLink>"><img src="<mt:ContentField label="og:image"><mt:AssetURL><mt:Else><mt:BlogURL>images/noimage.png</mt:ContentField>" alt="<mt:ContentField label="タイトル"><mt:Var name="__value__"></mt:ContentField>"></a>
+                    <a href="<mt:ContentPermaLink>"><img src="<mt:ContentField label="og:image"><mt:AssetURL><mt:Else><mt:SiteURL>images/noimage.png</mt:ContentField>" alt="<mt:ContentField label="タイトル"><mt:Var name="__value__"></mt:ContentField>"></a>
                   </figure>
                   <div class="entry-meta group">
                     <div class="entry-date text-smaller"><mt:ContentDate format="%Y.%m.%d"></div>
-                    <div class="entry-category"><mt:ContentField label="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:categorylabel></a></mt:ContentField></div>
+                    <div class="entry-category"><mt:ContentField label="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:CategoryLabel></a></mt:ContentField></div>
                   </div>
                   <div class="entry-title">
                     <a href="<mt:ContentPermalink>"><mt:ContentField label="タイトル"><mt:Var name="__value__"></mt:ContentField></a>
@@ -96,13 +96,15 @@
               </ul>
             </div>
           </div>
-          <a href="<mt:BlogURL>pressrelease/" class="content-section-btn text-smaller">プレスリリース TOP</a>
+          <a href="<mt:SiteURL>pressrelease/" class="content-section-btn text-smaller">プレスリリース TOP</a>
         </div>
       </div>
     </section>
   </mt:ContentsFooter>
   </mt:Contents>
 
+  <mt:SetVarBlock name="top_banners"><mt:Assets tag="@banner" lastn="3"><mt:AssetURL></mt:Assets></mt:SetVarBlock>
+  <mt:If name="top_banners">
     <section class="content-section">
       <div class="inner">
         <div class="banner-list">
@@ -114,8 +116,9 @@
         </div>
       </div>
     </section>
+  </mt:If>
 
-  <mt:Contents type="e963fb5543533ea801b8f2026702cfa2c12b6f8b" lastn="3">
+  <mt:Contents name="イベント・セミナー" lastn="3">
   <mt:ContentsHeader>
     <section class="content-section">
       <div class="inner">
@@ -130,32 +133,37 @@
   </mt:ContentsHeader>
                 <li>
                   <figure>
-                    <a href="<mt:ContentPermaLink>"><img src="<mt:ContentField label="og:image"><mt:AssetURL><mt:Else><mt:BlogURL>images/noimage.png</mt:ContentField>" alt="<mt:ContentField label="タイトル"><mt:Var name="__value__"></mt:ContentField>"></a>
+                    <a href="<mt:ContentPermaLink>"><img src="<mt:ContentField label="og:image"><mt:AssetURL><mt:Else><mt:SiteURL>images/noimage.png</mt:ContentField>" alt="<mt:ContentField label="タイトル"><mt:Var name="__value__"></mt:ContentField>"></a>
                   </figure>
                   <div class="entry-meta group">
                     <div class="entry-date text-smaller"><mt:ContentDate format="%Y.%m.%d"></div>
-                    <div class="entry-category"><mt:ContentField label="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:categorylabel></a></mt:ContentField></div>
+                    <div class="entry-category"><mt:ContentField label="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:CategoryLabel></a></mt:ContentField></div>
                   </div>
                   <div class="entry-title">
                     <a href="<mt:ContentPermalink>"><mt:ContentField label="タイトル"><mt:Var name="__value__"></mt:ContentField></a>
                   </div>
+                  <mt:SetVarBlock name="event_tags"><mt:ContentField label="タグ"><mt:TagName></mt:ContentField></mt:SetVarBlock>
+                  <mt:If name="event_tags">
                   <div class="labels">
                   <mt:ContentField label="タグ">
                     <a class="label tag text-xsmaller"><mt:TagName></a>
                   </mt:ContentField>
                   </div>
+                  </mt:If>
                 </li>
   <mt:ContentsFooter>
               </ul>
             </div>
           </div>
-          <a href="<mt:BlogURL>event/" class="content-section-btn text-smaller">イベント・セミナー TOP</a>
+          <a href="<mt:SiteURL>event/" class="content-section-btn text-smaller">イベント・セミナー TOP</a>
         </div>
       </div>
     </section>
   </mt:ContentsFooter>
   </mt:Contents>
 
+  <mt:SetVarBlock name="top_pages"><mt:Pages tag="@top"><mt:PageTitle></mt:Pages></mt:SetVarBlock>
+  <mt:If name="top_pages">
     <section class="content-section">
       <div class="inner">
         <div class="page-list">
@@ -167,14 +175,15 @@
         </div>
       </div>
     </section>
+  </mt:If>
 
   </div><!-- /.content-main -->
 </div><!-- /.content -->
 
-<mt:include module="footer">
+<mt:Include module="footer">
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="<mt:BlogURL encode_html="1">js/common.js"></script>
+<script src="<mt:SiteURL encode_html="1">js/common.js"></script>
 
 </body>
 </html>

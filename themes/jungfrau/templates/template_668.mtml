@@ -2,31 +2,31 @@
 <html lang="ja" itemscope itemtype="http://schema.org/WebPage">
 <head>
 <meta charset="UTF-8">
-<title><mt:ContentField label="タイトル"><mt:Var name="__value__"encode_html="1"></mt:ContentField> - プレスリリース | <mt:BlogName encode_html="1"></title>
+<title><mt:ContentField label="タイトル"><mt:Var name="__value__"encode_html="1"></mt:ContentField> - プレスリリース | <mt:SiteName encode_html="1"></title>
 <meta name="description" content="<mt:ContentField label="概要"><mt:Var name="__value__" encode_html="1"></mt:ContentField>">
 <meta name="keywords" content="Jungfrau,Movable Type,テーマ,CMS,プレスリリース">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <mt:Assets tag="@SITE_FAVICON" limit="1"><link rel="shortcut icon" href="<mt:AssetUrl encode_html="1">"></mt:Assets>
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:title" content="<mt:ContentField label="タイトル"><mt:Var name="__value__"encode_html="1"></mt:ContentField> - プレスリリース | <mt:BlogName encode_html="1">">
+<meta property="og:title" content="<mt:ContentField label="タイトル"><mt:Var name="__value__"encode_html="1"></mt:ContentField> - プレスリリース | <mt:SiteName encode_html="1">">
 <meta property="og:url" content="<mt:ContentPermalink encode_html="1">">
 <meta property="og:description" content="<mt:ContentField label="概要"><mt:Var name="__value__" encode_html="1"></mt:ContentField>">
-<meta property="og:site_name" content="<mt:BlogName encode_html="1">">
-<meta property="og:image" content="<mt:ignore><mt:ContentField label="og:image"><mt:asseturl></mt:ContentField></mt:ignore>">
+<meta property="og:site_name" content="<mt:SiteName encode_html="1">">
+<meta property="og:image" content="<mt:ContentField label="og:image"><mt:asseturl></mt:ContentField>">
 <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css">
-<link rel="stylesheet" href="<mt:BlogURL encode_html="1">css/reset.css">
-<link rel="stylesheet" href="<mt:BlogURL encode_html="1">css/style.css">
+<link rel="stylesheet" href="<mt:SiteURL encode_html="1">css/reset.css">
+<link rel="stylesheet" href="<mt:SiteURL encode_html="1">css/style.css">
 </head>
 
 <body>
 
 <div class="keyvisual">
   <div class="keyvisual-image">
-    <mt:include module="header">
+    <mt:Include module="header">
     <div class="keyvisual-title keyvisual-title-lower">
       <h1 class="keyvisual-lower-title">プレスリリース</h1>
-      <p class="keyvisual-title-description text-smaller"><mt:BlogName encode_html="1">のプレスリリースはこちらをご覧ください。</p>
+      <p class="keyvisual-title-description text-smaller"><mt:SiteName encode_html="1">のプレスリリースはこちらをご覧ください。</p>
     </div>
   </div>
 </div><!-- /.keyvisual -->
@@ -42,23 +42,28 @@
               <div class="entry-header group">
                 <div class="entry-date"><mt:ContentCreatedDate format="%Y.%m.%d"></div>
                 <div class="entry-category text-smaller">
-                  <mt:ignore><mt:ContentField label="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category"><mt:categorylabel></a></mt:ContentField></mt:ignore>
+                  <mt:ContentField label="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category"><mt:CategoryLabel></a></mt:ContentField>
                 </div>
               </div>
               <h1 class="entry-title"><mt:ContentField label="タイトル"><mt:Var name="__value__"></mt:ContentField></h1>
-            <mt:ignore>
+            <mt:ContentField label="og:image">
+            <mt:If name="__value__">
               <div class="entry-mainimage">
                 <mt:ContentField label="og:image"><img src="<mt:asseturl>" alt="<mt:ContentField label="タイトル"><mt:Var name="__value__"></mt:ContentField>"></mt:ContentField>
               </div>
-            </mt:ignore>
+            </mt:If>
+            </mt:ContentField>
               <div class="entry-body">
                 <mt:ContentField label="本文"><mt:Var name="__value__"></mt:ContentField>
               </div>
             
+            <mt:SetVarBlock name="pressrelease_asset"><mt:ContentField label="資料"><mt:AssetURL></mt:ContentField><mt:ContentField label="お問い合わせ"><mt:Var name="__value__"></mt:ContentField></mt:SetVarBlock>
+            <mt:If name="pressrelease_asset">
               <div class="entry-bottom-buttons">
-                <mt:ignore><a href="<mt:ContentField label="資料"><mt:AssetURL></mt:ContentField>" class="btn btn-large">資料ダウンロード</a></mt:ignore>
-                <a href="<mt:ContentField label="お問い合わせ"><mt:Var name="__value__"></mt:ContentField>" class="btn btn-large btn-primary">お問い合わせ</a>
+                <mt:ContentField label="資料"><mt:If name="__value__"><a href="<mt:ContentField label="資料"><mt:AssetURL></mt:ContentField>" class="btn btn-large">資料ダウンロード</a></mt:If></mt:ContentField>
+                <mt:ContentField label="お問い合わせ"><mt:If name="__value__"><a href="<mt:ContentField label="お問い合わせ"><mt:Var name="__value__"></mt:ContentField>" class="btn btn-large btn-primary">お問い合わせ</a></mt:If></mt:ContentField>
               </div>
+            </mt:If>
 
               <div class="socialbtns">
                 <mt:Include module="social-buttons">
@@ -78,7 +83,7 @@
   </div><!-- /.content-main -->
 
   <div class="content-side">
-    <mt:include module="sidemenu-pressrelease">
+    <mt:Include module="sidemenu-pressrelease">
   </div><!-- /.content-side -->
 
 </div><!-- /.content -->
@@ -86,7 +91,7 @@
 <mt:include module="footer">
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="<mt:BlogURL encode_html="1">js/common.js"></script>
+<script src="<mt:SiteURL encode_html="1">js/common.js"></script>
 
 </body>
 </html>
