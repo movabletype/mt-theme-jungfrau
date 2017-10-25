@@ -169,7 +169,7 @@ elements:
           search_results: 
             label: 検索結果
     importer: template_set
-  default_categoty_sets:
+  default_category_sets:
     importer: default_category_sets
     data:
       event_and_seminar:
