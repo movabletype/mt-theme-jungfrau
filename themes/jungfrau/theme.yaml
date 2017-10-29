@@ -82,7 +82,7 @@ elements:
                 preferred: 1
           template_659: 
             label: ニュース　記事
-            content_type: Jungfrau ニュース
+            content_type: ニュース
             mappings:
               ct:
                 archive_type: ContentType
@@ -120,7 +120,7 @@ elements:
                 preferred: 1
           template_603: 
             label: ニュース　カテゴリ
-            content_type: Jungfrau ニュース
+            content_type: ニュース
             mappings:
               ct_cat:
                 archive_type: ContentType-Category
@@ -130,7 +130,7 @@ elements:
                 category_field: カテゴリ
           template_604: 
             label: ニュース　年別
-            content_type: Jungfrau ニュース
+            content_type: ニュース
             mappings:
               ct_datetime:
                 archive_type: Category-Yearly
@@ -193,7 +193,7 @@ elements:
   default_content_types:
     importer: default_content_types
     data:
-      - name: Jungfrau ニュース
+      - name: ニュース
         description: ~
         user_disp_option: 1
         fields:
