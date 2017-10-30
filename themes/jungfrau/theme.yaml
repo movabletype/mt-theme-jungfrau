@@ -403,7 +403,7 @@ elements:
             label: プログラム
             description: ~
             display: optional
-            input_format: 0
+            input_format: blockeditor
             required: 0
             initial_value: ~
           - type: categories
