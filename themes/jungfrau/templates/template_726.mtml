@@ -44,9 +44,15 @@
             <div class="entrylist03-index entrylist03-index-lower">
               <ul class="group">
           </mt:ContentsHeader>
+                <mt:ContentField label="メイン画像">
+                  <mt:SetVarBlock name="image_width"><mt:AssetProperty property="image_width"></mt:SetVarblock>
+                  <mt:SetVarBlock name="image_height"><$mt:AssetProperty property="image_height"></mt:SetVarblock>
+                </mt:ContentField>
                 <li>
-                  <figure>
-                    <a href="<mt:ContentPermaLink>"><img src="<mt:ContentField label="og:image"><mt:AssetURL><mt:Else><mt:SiteURL>images/noimage.png</mt:ContentField>" alt="<mt:ContentField label="タイトル"><mt:Var name="__value__"></mt:ContentField>"></a>
+                  <figure<mt:ContentField label="メイン画像"><mt:If name="image_width" gt="$image_height"> class="horizontal"<mt:Else> class="vertical"</mt:If><mt:Else> class="is-noimage"</mt:ContentField>>
+                    <a href="<mt:ContentPermaLink>">
+                      <img src="<mt:ContentField label="メイン画像"><mt:AssetURL><mt:Else><mt:SiteURL>images/noimage.png</mt:ContentField>" alt="<mt:ContentField label="タイトル"><mt:Var name="__value__"></mt:ContentField>">
+                    </a>
                   </figure>
                   <div class="entry-meta group">
                     <div class="entry-date text-smaller"><mt:ContentDate format="%Y.%m.%d"></div>

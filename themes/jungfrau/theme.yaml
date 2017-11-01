@@ -288,6 +288,15 @@ elements:
             label: お問い合わせ
             description: ~
             initial_value: ~
+          - type: asset_image
+            label: メイン画像
+            description: ~
+            dispalay: default
+            required: 0
+            multiple: 0
+            allow_upload: 1
+            max: ~
+            min: ~
       - name: 会場
         description: ~
         user_disp_option: 1
@@ -476,6 +485,15 @@ elements:
             initial_value: ~
           - type: asset_image
             label: og:image
+            description: ~
+            dispalay: default
+            required: 0
+            multiple: 0
+            allow_upload: 1
+            max: ~
+            min: ~
+          - type: asset_image
+            label: メイン画像
             description: ~
             dispalay: default
             required: 0
