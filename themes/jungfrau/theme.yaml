@@ -114,7 +114,7 @@ elements:
             content_type: イベント・セミナー
             mappings:
               ct_datetime:
-                archive_type: Category-Yearly
+                archive_type: ContentType-Yearly
                 file_template: event/%y/%i
                 build_type: 1
                 preferred: 1
@@ -133,7 +133,7 @@ elements:
             content_type: ニュース
             mappings:
               ct_datetime:
-                archive_type: Category-Yearly
+                archive_type: ContentType-Yearly
                 file_template: news/%y/%i
                 build_type: 1
                 preferred: 1
@@ -143,7 +143,7 @@ elements:
             mappings:
               ct_cat:
                 archive_type: ContentType-Category
-                file_template: npressrelease/%-c/%i
+                file_template: pressrelease/%-c/%i
                 build_type: 1
                 preferred: 1
                 category_field: カテゴリ
@@ -151,8 +151,8 @@ elements:
             label: プレスリリース　年別
             mappings:
               ct_datetime:
-                archive_type: Category-Yearly
-                file_template: npressrelease/%y/%i
+                archive_type: ContentType-Yearly
+                file_template: pressrelease/%y/%i
                 build_type: 1
                 preferred: 1
         system: 
