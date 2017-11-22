@@ -2,18 +2,22 @@
 <html lang="ja" itemscope itemtype="http://schema.org/WebPage">
 <head>
 <meta charset="UTF-8">
-<title><mt:ContentField label="タイトル"><mt:Var name="__value__" encode_html="1"></mt:ContentField> - イベント・セミナー | <mt:SiteName encode_html="1"></title>
-<meta name="description" content="<mt:ContentField label="概要"><mt:Var name="__value__" trim_to="120+..." encode_html="1"></mt:ContentField>">
+<title><mt:ContentField label="タイトル"><mt:ContentFieldValue encode_html="1"></mt:ContentField> - イベント・セミナー | <mt:SiteName encode_html="1"></title>
+<meta name="description" content="<mt:ContentField label="本文"><mt:ContentFieldValue remove_html="1" strip_linefeeds="1" trim_to="120+..."></mt:ContentField>">
 <meta name="keywords" content="Jungfrau,Movable Type,テーマ,CMS,プレスリリース">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <mt:Assets tag="@SITE_FAVICON" limit="1"><link rel="shortcut icon" href="<mt:AssetUrl encode_html="1">"></mt:Assets>
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:title" content="<mt:ContentField label="タイトル"><mt:Var name="__value__" encode_html="1"></mt:ContentField> - イベント・セミナー | <mt:SiteName encode_html="1">">
+<meta property="og:title" content="<mt:ContentField label="タイトル"><mt:ContentFieldValue encode_html="1"></mt:ContentField> - イベント・セミナー | <mt:SiteName encode_html="1">">
 <meta property="og:url" content="<mt:ContentPermalink encode_html="1">">
-<meta property="og:description" content="<mt:ContentField label="概要"><mt:Var name="__value__" trim_to="120+..." encode_html="1"></mt:ContentField>">
+<meta property="og:description" content="<mt:ContentField label="本文"><mt:ContentFieldValue remove_html="1" strip_linefeeds="1" trim_to="120+..."></mt:ContentField>">
 <meta property="og:site_name" content="<mt:SiteName encode_html="1">">
 <meta property="og:image" content="<mt:ContentField label="og:image"><mt:AssetURL></mt:ContentField>">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<mt:ContentField label="タイトル"><mt:ContentFieldValue encode_html="1"></mt:ContentField> - イベント・セミナー | <mt:SiteName encode_html="1">">
+<meta name="twitter:description" content="<mt:ContentField label="本文"><mt:ContentFieldValue remove_html="1" strip_linefeeds="1" trim_to="120+..."></mt:ContentField>">
+<meta name="twitter:image" content="<mt:ContentField label="og:image"><mt:AssetURL></mt:ContentField>">
 <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css">
 <link rel="stylesheet" href="<mt:SiteURL encode_html="1">css/reset.css">
 <link rel="stylesheet" href="<mt:SiteURL encode_html="1">css/style.css">
@@ -46,7 +50,7 @@
                 </div>
               </div>
               <div class="event-detail-header">
-                <h1 class="entry-title entry-title-event"><mt:ContentField label="タイトル"><mt:Var name="__value__"></mt:ContentField></h1>
+                <h1 class="entry-title entry-title-event"><mt:ContentField label="タイトル"><mt:ContentFieldValue></mt:ContentField></h1>
                 <mt:SetVarBlock name="event_tags"><mt:ContentField label="タグ"><mt:TagName></mt:ContentField></mt:SetVarBlock>
                 <mt:If name="event_tags">
                 <div class="labels event-labels">
@@ -58,89 +62,86 @@
               </div>
               <div class="event-detail group">
                 <div class="entry-body">
-                  <mt:ContentField label="本文"><mt:Var name="__value__"></mt:ContentField>
+                  <mt:ContentField label="本文"><mt:ContentFieldValue></mt:ContentField>
                 </div>
                 <div class="event-excerpt">
                   <table>
                   <mt:ContentField label="開催日時">
-                  <mt:If name="__value__">
                     <tr>
                       <th>日時</th>
-                      <td><mt:ContentField label="開催日時" format="%Y年%m月%d日（%a）"><mt:Var name="__value__"></mt:ContentField><br>
-                      <mt:ContentField label="開場時間"><mt:If name="__value__"><mt:ContentField label="開場時間" format="%k:%M"><mt:Var name="__value__"></mt:ContentField> 〜 </mt:If></mt:ContentField><mt:ContentField label="終了日時"><mt:If name="__value__"><mt:ContentField label="終了日時" format="%k:%M"><mt:Var name="__value__"></mt:ContentField>（予定）<br></mt:If></mt:ContentField>
-                      <mt:ContentField label="開催日時メモ"><mt:Var name="__value__"></mt:ContentField></td>
+                      <td><mt:ContentField label="開催日時"><mt:ContentFieldValue format="%Y年%m月%d日（%a）"></mt:ContentField>
+                      <mt:ContentField label="開場時間"><br><mt:ContentFieldValue format="%k:%M"> 〜 <mt:Else></mt:ContentField><mt:ContentField label="終了日時"><mt:ContentFieldValue format="%k:%M"> （予定）<mt:Else></mt:ContentField>
+                      <mt:ContentField label="開催日時メモ"><br><mt:ContentFieldValue></mt:ContentField></td>
                     </tr>
-                  </mt:If>
+                    <mt:Else>
                   </mt:ContentField>
-                  <mt:SetVarBlock name="event_place"><mt:ContentField label="会場"><mt:ContentField label="会場名"><mt:Var name="__value__"></mt:ContentField></mt:ContentField></mt:SetVarBlock>
+                  <mt:SetVarBlock name="event_place"><mt:ContentField label="会場"><mt:ContentField label="会場名"><mt:ContentFieldValue></mt:ContentField></mt:ContentField></mt:SetVarBlock>
                   <mt:If name="event_place">
                     <tr>
                       <th>会場</th>
                       <td>
                       <mt:ContentField label="会場">
-                        <mt:ContentField label="会場名"><mt:Var name="__value__"></mt:ContentField><br>
-                        <mt:ContentField label="住所"><mt:Var name="__value__"></mt:ContentField>
+                        <mt:ContentField label="サイトURL"><a href="<mt:ContentFieldValue>" target="_blank"></mt:ContentField><mt:ContentField label="会場名"><mt:ContentFieldValue></mt:ContentField><mt:ContentField label="サイトURL"></a></mt:ContentField><br>
+                        <mt:ContentField label="住所"><mt:ContentFieldValue></mt:ContentField>
                       </mt:ContentField>
                       </td>
                     </tr>
                   </mt:If>
                   <mt:ContentField label="参加費">
-                  <mt:If name="__value__">
                     <tr>
                       <th>参加費</th>
-                      <td><mt:ContentField label="参加費"><mt:Var name="__value__"></mt:ContentField></td>
+                      <td><mt:ContentField label="参加費"><mt:ContentFieldValue></mt:ContentField></td>
                     </tr>
-                  </mt:If>
+                    <mt:Else>
                   </mt:ContentField>
-                  <mt:SetVarBlock name="event_lecturer"><mt:ContentField label="講師"><mt:ContentField label="講師名"><mt:Var name="__value__"></mt:ContentField></mt:ContentField></mt:SetVarBlock>
+                  <mt:SetVarBlock name="event_lecturer"><mt:ContentField label="講師"><mt:ContentField label="講師名"><mt:ContentFieldValue></mt:ContentField></mt:ContentField></mt:SetVarBlock>
                   <mt:If name="event_lecturer">
                     <tr>
                       <th>講師</th>
                       <td>
                       <mt:ContentField label="講師">
-                        <mt:ContentField label="会社名"><mt:Var name="__value__"></mt:ContentField> <mt:ContentField label="講師名"><mt:Var name="__value__"></mt:ContentField><br>
+                        <mt:ContentField label="会社名"><mt:ContentFieldValue></mt:ContentField> <mt:ContentField label="講師名"><mt:ContentFieldValue></mt:ContentField><br>
                       </mt:ContentField>
                       </td>
                     </tr>
                   </mt:If>
                   <mt:ContentField label="定員">
-                  <mt:If name="__value__">
                     <tr>
                       <th>定員</th>
-                      <td><mt:ContentField label="定員"><mt:Var name="__value__"></mt:ContentField>名</td>
+                      <td><mt:ContentField label="定員"><mt:ContentFieldValue></mt:ContentField>名</td>
                     </tr>
+                    <mt:Else>
                   </mt:If>
                   </mt:ContentField>
-                  <mt:SetVarBlock name="event_recommend"><mt:ContentField label="こんな方におすすめ"><mt:Var name="__value__"></mt:ContentField></mt:SetVarBlock>
+                  <mt:SetVarBlock name="event_recommend"><mt:ContentField label="こんな方におすすめ"><mt:ContentFieldValue></mt:ContentField></mt:SetVarBlock>
                   <mt:If name="event_recommend">
                     <tr>
                       <th>こんな方におすすめ</th>
-                      <td><mt:ContentField label="こんな方におすすめ"><mt:Var name="__value__"><br></mt:ContentField></td>
+                      <td><mt:ContentField label="こんな方におすすめ"><mt:ContentFieldValue><br></mt:ContentField></td>
                     </tr>
                   </mt:If>
                   <mt:ContentField label="主催">
-                  <mt:If name="__value__">
                     <tr>
                       <th>主催</th>
-                      <td><mt:ContentField label="主催"><mt:Var name="__value__"></mt:ContentField></td>
+                      <td><mt:ContentField label="主催"><mt:ContentFieldValue></mt:ContentField></td>
                     </tr>
-                  </mt:If>
+                    <mt:Else>
                   </mt:ContentField>
                   </table>
                 </div>
               </div>
 
-            <mt:If name="event_place">
+            <mt:If name="event_lecturer">
               <div class="event-lecturer">
                 <h2 class="subtitle-with-border"><span>講師紹介</span></h2>
                 <ul class="group">
                 <mt:ContentField label="講師">
                   <li>
-                    <mt:ContentField label="講師画像"><figure><img src="<mt:AssetURL>" alt="<mt:ContentField label="講師名"><mt:Var name="__value__"></mt:ContentField>"></figure></mt:ContentField>
+                    <mt:ContentField label="講師画像"><figure><img src="<mt:AssetURL>" alt="<mt:ContentField label="講師名"><mt:ContentFieldValue></mt:ContentField>"></figure></mt:ContentField>
                     <div class="event-lecturer-detail">
-                      <p class="position"><mt:ContentField label="会社名"><mt:Var name="__value__"></mt:ContentField><br><mt:ContentField label="役職"><mt:Var name="__value__"></mt:ContentField></p>
-                      <p class="name"><mt:ContentField label="講師名"><mt:Var name="__value__"></mt:ContentField></p>
-                      <p class="profile"><mt:ContentField label="プロフィール"><mt:Var name="__value__"></mt:ContentField></p>
+                      <p class="position"><mt:ContentField label="会社名"><mt:ContentFieldValue></mt:ContentField><br><mt:ContentField label="役職"><mt:ContentFieldValue></mt:ContentField></p>
+                      <p class="name"><mt:ContentField label="講師名"><mt:ContentFieldValue></mt:ContentField></p>
+                      <p class="profile"><mt:ContentField label="プロフィール"><mt:ContentFieldValue></mt:ContentField></p>
                     </div>
                   </li>
                 </mt:ContentField>
@@ -149,14 +150,13 @@
             </mt:If>
 
             <mt:ContentField label="プログラム">
-            <mt:If name="__value__">
               <div class="event-program">
                 <h2 class="subtitle-with-border"><span>プログラム</span></h2>
                 <div class="event-program-list">
-                  <mt:ContentField label="プログラム"><mt:Var name="__value__"></mt:ContentField>
+                  <mt:ContentField label="プログラム"><mt:ContentFieldValue></mt:ContentField>
                 </div>
               </div>
-            </mt:If>
+              <mt:Else>
             </mt:ContentField>
 
               <div class="socialbtns">

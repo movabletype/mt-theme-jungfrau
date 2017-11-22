@@ -16,6 +16,10 @@
 <meta property="og:description" content="<mt:PageExcerpt encode_html="1">">
 <meta property="og:site_name" content="<mt:SiteName encode_html="1">">
 <mt:Assets type="image" tag="@OG_IMAGE" limit="1"><meta property="og:image" content="<mt:AssetUrl encode_html="1">"></mt:Assets>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<mt:PageTitle encode_html="1"> - <mt:Var name="parentfolder" encode_html="1"> | <mt:SiteName encode_html="1">">
+<meta name="twitter:description" content="<mt:PageExcerpt encode_html="1">">
+<mt:Assets type="image" tag="@OG_IMAGE" limit="1"><meta name="twitter:image" content="<mt:AssetUrl encode_html="1">"></mt:Assets>
 <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css">
 <link rel="stylesheet" href="<mt:SiteURL encode_html="1">css/reset.css">
 <link rel="stylesheet" href="<mt:SiteURL encode_html="1">css/style.css">
@@ -55,7 +59,7 @@
   </div><!-- /.content-main -->
 
   <div class="content-side">
-  <mt:Pages folder="$parentfolder">
+  <mt:Pages folder="$parentfolder" sort_by="created_on">
     <mt:PagesHeader>
     <section class="content-side-section content-side-section-box">
       <div class="content-side-section-box-title"><mt:PageFolder><mt:FolderLabel encode_html="1"></mt:PageFolder></div>

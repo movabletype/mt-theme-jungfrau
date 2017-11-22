@@ -325,6 +325,11 @@ elements:
             min_length: ~
             max_length: ~
             initial_value: ~
+          - type: url
+            label: サイトURL
+            description: ~
+            initial_value: ~
+            required: 0
       - name: 講師
         description: ~
         user_disp_option: 1

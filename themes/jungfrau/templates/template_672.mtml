@@ -14,6 +14,10 @@
 <meta property="og:description" content="<mt:SiteName encode_html="1">のイベント・セミナー情報はこちらをご覧ください。">
 <meta property="og:site_name" content="<mt:SiteName encode_html="1">">
 <mt:Assets type="image" tag="@OG_IMAGE" limit="1"><meta property="og:image" content="<mt:AssetUrl encode_html="1">"></mt:Assets>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="イベント・セミナー | <mt:SiteName encode_html="1">">
+<meta name="twitter:description" content="<mt:SiteName encode_html="1">のイベント・セミナー情報はこちらをご覧ください。">
+<mt:Assets type="image" tag="@OG_IMAGE" limit="1"><meta name="twitter:image" content="<mt:AssetUrl encode_html="1">"></mt:Assets>
 <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css">
 <link rel="stylesheet" href="<mt:SiteURL encode_html="1">css/reset.css">
 <link rel="stylesheet" href="<mt:SiteURL encode_html="1">css/style.css">
@@ -65,7 +69,7 @@
                 <li>
                   <figure<mt:ContentField label="メイン画像"><mt:If name="image_width" gt="$image_height"> class="horizontal"<mt:Else> class="vertical"</mt:If><mt:Else> class="is-noimage"</mt:ContentField>>
                     <a href="<mt:ContentPermaLink>">
-                      <img src="<mt:ContentField label="メイン画像"><mt:AssetURL><mt:Else><mt:SiteURL>images/noimage.png</mt:ContentField>" alt="<mt:ContentField label="タイトル"><mt:Var name="__value__"></mt:ContentField>">
+                      <img src="<mt:ContentField label="メイン画像"><mt:AssetURL><mt:Else><mt:SiteURL>images/noimage.png</mt:ContentField>" alt="<mt:ContentField label="タイトル"><mt:ContentFieldValue></mt:ContentField>">
                     </a>
                   </figure>
                   <div class="entry-meta group">
@@ -73,7 +77,7 @@
                     <div class="entry-category"><mt:ContentField label="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:CategoryLabel></a></mt:ContentField></div>
                   </div>
                   <div class="entry-title">
-                    <a href="<mt:ContentPermalink>"><mt:ContentField label="タイトル"><mt:Var name="__value__"></mt:ContentField></a>
+                    <a href="<mt:ContentPermalink>"><mt:ContentField label="タイトル"><mt:ContentFieldValue></mt:ContentField></a>
                   </div>
                   <mt:SetVarBlock name="event_tags"><mt:ContentField label="タグ"><mt:TagName></mt:ContentField></mt:SetVarBlock>
                   <mt:If name="event_tags">
