@@ -147,7 +147,7 @@ elements:
                 build_type: 1
                 preferred: 1
                 category_field: カテゴリ
-          template_671: 
+          template_1026: 
             label: プレスリリース　年別
             mappings:
               ct_datetime:
