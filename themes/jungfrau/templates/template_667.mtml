@@ -44,23 +44,23 @@
           <div class="inner">
             <div class="entrylist02-index entrylist02-index-lower">
               <ul class="group">
-              <mt:Contents name="プレスリリース">
-                <mt:ContentField label="メイン画像">
+              <mt:Contents content_type="プレスリリース">
+                <mt:ContentField content_field="メイン画像">
                   <mt:SetVarBlock name="image_width"><mt:AssetProperty property="image_width"></mt:SetVarblock>
                   <mt:SetVarBlock name="image_height"><$mt:AssetProperty property="image_height"></mt:SetVarblock>
                 </mt:ContentField>
                 <li>
-                  <figure<mt:ContentField label="メイン画像"><mt:If name="image_width" gt="$image_height"> class="horizontal"<mt:Else> class="vertical"</mt:If><mt:Else> class="is-noimage"</mt:ContentField>>
+                  <figure<mt:ContentField content_field="メイン画像"><mt:If name="image_width" gt="$image_height"> class="horizontal"<mt:Else> class="vertical"</mt:If><mt:Else> class="is-noimage"</mt:ContentField>>
                     <a href="<mt:ContentPermaLink>">
-                      <img src="<mt:ContentField label="メイン画像"><mt:AssetURL><mt:Else><mt:SiteURL>images/noimage.png</mt:ContentField>" alt="<mt:ContentField label="タイトル"><mt:ContentFieldValue></mt:ContentField>">
+                      <img src="<mt:ContentField content_field="メイン画像"><mt:AssetURL><mt:Else><mt:SiteURL>images/noimage.png</mt:ContentField>" alt="<mt:ContentField content_field="タイトル"><mt:ContentFieldValue></mt:ContentField>">
                     </a>
                   </figure>
                   <div class="entry-meta group">
                     <div class="entry-date text-smaller"><mt:ContentDate format="%Y.%m.%d"></div>
-                    <div class="entry-category"><mt:ContentField label="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:CategoryLabel></a></mt:ContentField></div>
+                    <div class="entry-category"><mt:ContentField content_field="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:CategoryLabel></a></mt:ContentField></div>
                   </div>
                   <div class="entry-title">
-                    <a href="<mt:ContentPermalink>"><mt:ContentField label="タイトル"><mt:ContentFieldValue></mt:ContentField></a>
+                    <a href="<mt:ContentPermalink>"><mt:ContentField content_field="タイトル"><mt:ContentFieldValue></mt:ContentField></a>
                   </div>
                 </li>
               </mt:Contents>

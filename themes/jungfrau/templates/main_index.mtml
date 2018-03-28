@@ -38,7 +38,7 @@
 <div class="content">
   <div class="content-main">
 
-  <mt:Contents name="ニュース" lastn="5">
+  <mt:Contents content_type="ニュース" lastn="5">
   <mt:ContentsHeader>
     <section class="content-section">
       <div class="inner">
@@ -54,7 +54,7 @@
                 <li>
                   <div class="entry-date text-smaller"><mt:ContentDate format="%Y.%m.%d"></div>
                   <div class="entry-category">
-                    <mt:ContentField label="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:CategoryLabel></a></mt:ContentField>
+                    <mt:ContentField content_field="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:CategoryLabel></a></mt:ContentField>
                   </div>
                   <div class="entry-title">
                     <a href="<mt:ContentPermaLink>"><mt:ContentField label="タイトル"><mt:ContentFieldValue></mt:ContentField></a>
@@ -71,7 +71,7 @@
   </mt:ContentsFooter>
   </mt:Contents>
 
-  <mt:Contents name="プレスリリース" lastn="4">
+  <mt:Contents content_type="プレスリリース" lastn="4">
   <mt:ContentsHeader>
     <section class="content-section">
       <div class="inner">
@@ -89,17 +89,17 @@
                   <mt:SetVarBlock name="image_height"><$mt:AssetProperty property="image_height"></mt:SetVarblock>
                 </mt:ContentField>
                 <li>
-                  <figure<mt:ContentField label="メイン画像"><mt:If name="image_width" gt="$image_height"> class="horizontal"<mt:Else> class="vertical"</mt:If><mt:Else> class="is-noimage"</mt:ContentField>>
+                  <figure<mt:ContentField content_field="メイン画像"><mt:If name="image_width" gt="$image_height"> class="horizontal"<mt:Else> class="vertical"</mt:If><mt:Else> class="is-noimage"</mt:ContentField>>
                     <a href="<mt:ContentPermaLink>">
-                      <img src="<mt:ContentField label="メイン画像"><mt:AssetURL><mt:Else><mt:SiteURL>images/noimage.png</mt:ContentField>" alt="<mt:ContentField label="タイトル"><mt:ContentFieldValue></mt:ContentField>">
+                      <img src="<mt:ContentField content_field="メイン画像"><mt:AssetURL><mt:Else><mt:SiteURL>images/noimage.png</mt:ContentField>" alt="<mt:ContentField content_field="タイトル"><mt:ContentFieldValue></mt:ContentField>">
                     </a>
                   </figure>
                   <div class="entry-meta group">
                     <div class="entry-date text-smaller"><mt:ContentDate format="%Y.%m.%d"></div>
-                    <div class="entry-category"><mt:ContentField label="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:CategoryLabel></a></mt:ContentField></div>
+                    <div class="entry-category"><mt:ContentField content_field="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:CategoryLabel></a></mt:ContentField></div>
                   </div>
                   <div class="entry-title">
-                    <a href="<mt:ContentPermalink>"><mt:ContentField label="タイトル"><mt:ContentFieldValue></mt:ContentField></a>
+                    <a href="<mt:ContentPermalink>"><mt:ContentField content_field="タイトル"><mt:ContentFieldValue></mt:ContentField></a>
                   </div>
                 </li>
   <mt:ContentsFooter>
@@ -128,7 +128,7 @@
     </section>
   </mt:If>
 
-  <mt:Contents name="イベント・セミナー" lastn="3">
+  <mt:Contents content_type="イベント・セミナー" lastn="3">
   <mt:ContentsHeader>
     <section class="content-section">
       <div class="inner">
@@ -141,27 +141,27 @@
             <div class="entrylist03-index">
               <ul class="group">
   </mt:ContentsHeader>
-                <mt:ContentField label="メイン画像">
+                <mt:ContentField content_field="メイン画像">
                   <mt:SetVarBlock name="image_width"><mt:AssetProperty property="image_width"></mt:SetVarblock>
                   <mt:SetVarBlock name="image_height"><$mt:AssetProperty property="image_height"></mt:SetVarblock>
                 </mt:ContentField>
                 <li>
-                  <figure<mt:ContentField label="メイン画像"><mt:If name="image_width" gt="$image_height"> class="horizontal"<mt:Else> class="vertical"</mt:If><mt:Else> class="is-noimage"</mt:ContentField>>
+                  <figure<mt:ContentField content_field="メイン画像"><mt:If name="image_width" gt="$image_height"> class="horizontal"<mt:Else> class="vertical"</mt:If><mt:Else> class="is-noimage"</mt:ContentField>>
                     <a href="<mt:ContentPermaLink>">
-                      <img src="<mt:ContentField label="メイン画像"><mt:AssetURL><mt:Else><mt:SiteURL>images/noimage.png</mt:ContentField>" alt="<mt:ContentField label="タイトル"><mt:ContentFieldValue></mt:ContentField>">
+                      <img src="<mt:ContentField content_field="メイン画像"><mt:AssetURL><mt:Else><mt:SiteURL>images/noimage.png</mt:ContentField>" alt="<mt:ContentField content_field="タイトル"><mt:ContentFieldValue></mt:ContentField>">
                     </a>
                   </figure>
                   <div class="entry-meta group">
                     <div class="entry-date text-smaller"><mt:ContentDate format="%Y.%m.%d"></div>
-                    <div class="entry-category"><mt:ContentField label="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:CategoryLabel></a></mt:ContentField></div>
+                    <div class="entry-category"><mt:ContentField content_field="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:CategoryLabel></a></mt:ContentField></div>
                   </div>
                   <div class="entry-title">
-                    <a href="<mt:ContentPermalink>"><mt:ContentField label="タイトル"><mt:ContentFieldValue></mt:ContentField></a>
+                    <a href="<mt:ContentPermalink>"><mt:ContentField content_field="タイトル"><mt:ContentFieldValue></mt:ContentField></a>
                   </div>
-                  <mt:SetVarBlock name="event_tags"><mt:ContentField label="タグ"><mt:TagName></mt:ContentField></mt:SetVarBlock>
+                  <mt:SetVarBlock name="event_tags"><mt:ContentField content_field="タグ"><mt:TagName></mt:ContentField></mt:SetVarBlock>
                   <mt:If name="event_tags">
                   <div class="labels">
-                  <mt:ContentField label="タグ">
+                  <mt:ContentField content_field="タグ">
                     <a class="label tag text-xsmaller"><mt:TagName></a>
                   </mt:ContentField>
                   </div>

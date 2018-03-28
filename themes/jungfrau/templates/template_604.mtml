@@ -45,14 +45,14 @@
             <h2 class="content-title-main"><mt:ArchiveTitle>一覧</h2>
             <div class="entrylist01-index entrylist01-index-lower">
               <ul>
-              <mt:Contents name="ニュース">
+              <mt:Contents content_type="ニュース">
                 <li>
                   <div class="entry-date text-smaller"><mt:ContentDate format="%Y.%m.%d"></div>
                   <div class="entry-category">
-                    <mt:ContentField label="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:categorylabel></a></mt:ContentField>
+                    <mt:ContentField content_field="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:categorylabel></a></mt:ContentField>
                   </div>
                   <div class="entry-title">
-                    <a href="<mt:ContentPermalink>"><mt:ContentField label="タイトル"><mt:ContentFieldValue></mt:ContentField></a>
+                    <a href="<mt:ContentPermalink>"><mt:ContentField content_field="タイトル"><mt:ContentFieldValue></mt:ContentField></a>
                   </div>
                 </li>
                 </mt:Contents>
