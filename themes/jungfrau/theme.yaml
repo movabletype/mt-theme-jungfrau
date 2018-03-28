@@ -200,7 +200,7 @@ elements:
           - type: single_line_text
             label: タイトル
             description:
-            dispalay: force
+            display: force
             required: 1
             min_length: ~
             max_length: ~
@@ -228,7 +228,7 @@ elements:
           - type: asset_image
             label: og:image
             description: ~
-            dispalay: default
+            display: default
             required: 0
             multiple: 0
             allow_upload: 1
@@ -241,7 +241,7 @@ elements:
           - type: single_line_text
             label: タイトル
             description: ~
-            dispalay: force
+            display: force
             required: 1
             min_length: ~
             max_length: ~
@@ -269,7 +269,7 @@ elements:
           - type: asset_image
             label: og:image
             description: ~
-            dispalay: default
+            display: default
             required: 0
             multiple: 0
             allow_upload: 1
@@ -278,7 +278,7 @@ elements:
           - type: asset
             label: 資料
             description: ~
-            dispalay: default
+            display: default
             required: 0
             multiple: 1
             allow_upload: 1
@@ -291,7 +291,7 @@ elements:
           - type: asset_image
             label: メイン画像
             description: ~
-            dispalay: default
+            display: default
             required: 0
             multiple: 0
             allow_upload: 1
@@ -304,7 +304,7 @@ elements:
           - type: single_line_text
             label: 会場名
             description: ~
-            dispalay: force
+            display: force
             required: 1
             min_length: ~
             max_length: ~
@@ -312,7 +312,7 @@ elements:
           - type: single_line_text
             label: 住所
             description: ~
-            dispalay: default
+            display: default
             required: 0
             min_length: ~
             max_length: ~
@@ -320,7 +320,7 @@ elements:
           - type: single_line_text
             label: アクセス
             description: ~
-            dispalay: default
+            display: default
             required: 0
             min_length: ~
             max_length: ~
@@ -337,7 +337,7 @@ elements:
           - type: single_line_text
             label: 講師名
             description: ~
-            dispalay: force
+            display: force
             required: 1
             min_length: ~
             max_length: ~
@@ -345,7 +345,7 @@ elements:
           - type: single_line_text
             label: 会社名
             description: ~
-            dispalay: default
+            display: default
             required: 0
             min_length: ~
             max_length: ~
@@ -353,7 +353,7 @@ elements:
           - type: single_line_text
             label: 役職
             description: ~
-            dispalay: default
+            display: default
             required: 0
             min_length: ~
             max_length: ~
@@ -368,7 +368,7 @@ elements:
           - type: asset_image
             label: 講師画像
             description: ~
-            dispalay: default
+            display: default
             required: 0
             multiple: 0
             allow_upload: 1
@@ -381,7 +381,7 @@ elements:
           - type: single_line_text
             label: タイトル
             description: ~
-            dispalay: force
+            display: force
             required: 1
             min_length: ~
             max_length: ~
@@ -408,7 +408,7 @@ elements:
           - type: single_line_text
             label: 主催
             description: ~
-            dispalay: default
+            display: default
             required: 0
             min_length: ~
             max_length: ~
@@ -457,7 +457,7 @@ elements:
           - type: single_line_text
             label: 開催日時メモ
             description: ~
-            dispalay: optional
+            display: optional
             required: 0
             min_length: ~
             max_length: ~
@@ -491,7 +491,7 @@ elements:
           - type: asset_image
             label: og:image
             description: ~
-            dispalay: default
+            display: default
             required: 0
             multiple: 0
             allow_upload: 1
@@ -500,7 +500,7 @@ elements:
           - type: asset_image
             label: メイン画像
             description: ~
-            dispalay: default
+            display: default
             required: 0
             multiple: 0
             allow_upload: 1
