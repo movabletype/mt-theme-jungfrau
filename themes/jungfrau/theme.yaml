@@ -149,6 +149,7 @@ elements:
                 category_field: カテゴリ
           template_1026: 
             label: プレスリリース　年別
+            content_type: プレスリリース
             mappings:
               ct_datetime:
                 archive_type: ContentType-Yearly
