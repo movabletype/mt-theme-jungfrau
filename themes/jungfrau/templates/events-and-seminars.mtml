@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja" itemscope itemtype="http://schema.org/WebPage">
+<head>
+<meta charset="UTF-8">
+<title><__trans phrase="[_1] - Events and seminars" params="<mt:ContentField content_field="<__trans phrase="Title">"><mt:ContentFieldValue encode_html="1" encode_html="1"></mt:ContentField>"> | <mt:SiteName encode_html="1"></title>
+<meta name="description" content="<mt:ContentField content_field="<__trans phrase="Body">"><mt:ContentFieldValue remove_html="1" strip_linefeeds="1" trim_to="120+..."></mt:ContentField>">
+<meta name="keywords" content="<__trans phrase="__THEME_EVENT_KEYWORDS__">">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<mt:Assets tag="@SITE_FAVICON" limit="1"><link rel="shortcut icon" href="<mt:AssetUrl encode_html="1">"></mt:Assets>
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="<__trans phrase="[_1] - Events and seminars" params="<mt:ContentField content_field="<__trans phrase="Title">"><mt:ContentFieldValue encode_html="1" encode_html="1"></mt:ContentField>"> | <mt:SiteName encode_html="1">">
+<meta property="og:url" content="<mt:ContentPermalink encode_html="1">">
+<meta property="og:description" content="<mt:ContentField content_field="<__trans phrase="Body">"><mt:ContentFieldValue remove_html="1" strip_linefeeds="1" trim_to="120+..."></mt:ContentField>">
+<meta property="og:site_name" content="<mt:SiteName encode_html="1">">
+<meta property="og:image" content="<mt:ContentField content_field="og:image"><mt:AssetURL></mt:ContentField>">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<__trans phrase="[_1] - Events and seminars" params="<mt:ContentField content_field="<__trans phrase="Title">"><mt:ContentFieldValue encode_html="1" encode_html="1"></mt:ContentField>"> | <mt:SiteName encode_html="1">">
+<meta name="twitter:description" content="<mt:ContentField content_field="<__trans phrase="Body">"><mt:ContentFieldValue remove_html="1" strip_linefeeds="1" trim_to="120+..."></mt:ContentField>">
+<meta name="twitter:image" content="<mt:ContentField content_field="og:image"><mt:AssetURL></mt:ContentField>">
+<link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css">
+<link rel="stylesheet" href="<mt:SiteURL encode_html="1">css/reset.css">
+<link rel="stylesheet" href="<mt:SiteURL encode_html="1">css/style.css">
+</head>
+
+<body>
+
+<div class="keyvisual">
+  <div class="keyvisual-image">
+    <mt:Include module="<__trans phrase="header">">
+    <div class="keyvisual-title keyvisual-title-lower">
+      <h1 class="keyvisual-lower-title"><__trans phrase="Events and seminars"></h1>
+      <p class="keyvisual-title-description text-smaller"><__trans phrase="Events and seminars information from [_1]." params="<mt:SiteName encode_html="1" encode_html="1">"></p>
+    </div>
+  </div>
+</div><!-- /.keyvisual -->
+
+<div class="content">
+  <div class="content-main">
+
+    <section class="content-section">
+      <div class="inner">
+        <div class="content-section-box">
+          <div class="inner">
+            <article class="entry">
+              <div class="entry-header group">
+                <div class="entry-date"><mt:ContentCreatedDate format="<__trans phrase="__JUNGFRAU_DATE__">"></div>
+                <div class="entry-category text-smaller">
+                  <mt:ContentField content_field="Category"><a href="<mt:CategoryArchiveLink>" class="label category"><mt:CategoryLabel></a></mt:ContentField>
+                </div>
+              </div>
+              <div class="event-detail-header">
+                <h1 class="entry-title entry-title-event"><mt:ContentField content_field="<__trans phrase="Title">"><mt:ContentFieldValue></mt:ContentField></h1>
+                <mt:SetVarBlock name="event_tags"><mt:ContentField content_field="<__trans phrase="Tag">"><mt:TagName></mt:ContentField></mt:SetVarBlock>
+                <mt:If name="event_tags">
+                <div class="labels event-labels">
+                  <mt:ContentField content_field="<__trans phrase="Tag">">
+                    <a class="label tag text-xsmaller"><mt:TagName></a>
+                  </mt:ContentField>
+                </div>
+                </mt:If>
+              </div>
+              <div class="event-detail group">
+                <div class="entry-body">
+                  <mt:ContentField content_field="<__trans phrase="Body">"><mt:ContentFieldValue></mt:ContentField>
+                </div>
+                <div class="event-excerpt">
+                  <table>
+                  <mt:ContentField content_field="Event Date">
+                    <tr>
+                      <th><__trans phrase="Date"></th>
+                      <td><mt:ContentField content_field="Event Date"><mt:ContentFieldValue format="<__trans phrase="__EVENT_DATE_FORMAT__">"></mt:ContentField>
+                      <mt:ContentField content_field="<__trans phrase="Opening Time">"><br><mt:ContentFieldValue format="%k:%M"> 〜 <mt:Else></mt:ContentField><mt:ContentField content_field="<__trans phrase="Event End Date">"><mt:ContentFieldValue format="%k:%M"><mt:Else></mt:ContentField>
+                      <mt:ContentField content_field="<__trans phrase="Note for Event Date">"><br><mt:ContentFieldValue></mt:ContentField></td>
+                    </tr>
+                    <mt:Else>
+                  </mt:ContentField>
+                  <mt:SetVarBlock name="event_place"><mt:ContentField content_field="<__trans phrase="Venue">"><mt:ContentField content_field="<__trans phrase="Venue Name">"><mt:ContentFieldValue></mt:ContentField></mt:ContentField></mt:SetVarBlock>
+                  <mt:If name="event_place">
+                    <tr>
+                      <th><__trans phrase="Venue"></th>
+                      <td>
+                      <mt:ContentField content_field="<__trans phrase="Venue">">
+                        <mt:ContentField content_field="<__trans phrase="Site URL">"><a href="<mt:ContentFieldValue>" target="_blank"></mt:ContentField><mt:ContentField content_field="<__trans phrase="Venue Name">"><mt:ContentFieldValue></mt:ContentField><mt:ContentField content_field="<__trans phrase="Site URL">"></a></mt:ContentField><br>
+                        <mt:ContentField content_field="<__trans phrase="Address">"><mt:ContentFieldValue></mt:ContentField>
+                      </mt:ContentField>
+                      </td>
+                    </tr>
+                  </mt:If>
+                  <mt:ContentField content_field="Event Date">
+                    <tr>
+                      <th><__trans phrase="Price"></th>
+                      <td><mt:ContentField content_field="<__trans phrase="Price">"><mt:ContentFieldValue></mt:ContentField></td>
+                    </tr>
+                    <mt:Else>
+                  </mt:ContentField>
+                  <mt:SetVarBlock name="event_lecturer"><mt:ContentField content_field="<__trans phrase="Speaker">"><mt:ContentField content_field="<__trans phrase="Speaker Name">"><mt:ContentFieldValue></mt:ContentField></mt:ContentField></mt:SetVarBlock>
+                  <mt:If name="event_lecturer">
+                    <tr>
+                      <th><__trans phrase="Speakers"></th>
+                      <td>
+                      <mt:ContentField content_field="<__trans phrase="Speaker">">
+                        <mt:ContentField content_field="<__trans phrase="Company Name">"><mt:ContentFieldValue></mt:ContentField> <mt:ContentField content_field="<__trans phrase="Speaker Name">"><mt:ContentFieldValue></mt:ContentField><br>
+                      </mt:ContentField>
+                      </td>
+                    </tr>
+                  </mt:If>
+                  <mt:ContentField content_field="<__trans phrase="Capacity">">
+                    <tr>
+                      <th><__trans phrase="Capacity"></th>
+                      <td><mt:ContentField content_field="<__trans phrase="Capacity">"><mt:ContentFieldValue></mt:ContentField></td>
+                    </tr>
+                    <mt:Else>
+                  </mt:If>
+                  </mt:ContentField>
+                  <mt:SetVarBlock name="event_recommend"><mt:ContentField content_field="<__trans phrase="Recommend To">"><mt:ContentFieldValue></mt:ContentField></mt:SetVarBlock>
+                  <mt:If name="event_recommend">
+                    <tr>
+                      <th><__trans phrase="Recommends"></th>
+                      <td><mt:ContentField content_field="<__trans phrase="Recommend To">"><mt:ContentFieldValue><br></mt:ContentField></td>
+                    </tr>
+                  </mt:If>
+                  <mt:ContentField content_field="<__trans phrase="Promoter">">
+                    <tr>
+                      <th><__trans phrase="Promoter"></th>
+                      <td><mt:ContentField content_field="<__trans phrase="Promoter">"><mt:ContentFieldValue></mt:ContentField></td>
+                    </tr>
+                    <mt:Else>
+                  </mt:ContentField>
+                  </table>
+                </div>
+              </div>
+
+            <mt:If name="event_lecturer">
+              <div class="event-lecturer">
+                <h2 class="subtitle-with-border"><span><__trans phrase="Speakers"></span></h2>
+                <ul class="group">
+                <mt:ContentField content_field="<__trans phrase="Speaker">">
+                  <li>
+                    <mt:ContentField content_field="<__trans phrase="Speaker Photo">"><figure><img src="<mt:AssetURL>" alt="<mt:ContentField content_field="<__trans phrase="Speaker Name">"><mt:ContentFieldValue></mt:ContentField>"></figure></mt:ContentField>
+                    <div class="event-lecturer-detail">
+                      <p class="position"><mt:ContentField content_field="<__trans phrase="Company Name">"><mt:ContentFieldValue></mt:ContentField><br><mt:ContentField content_field="<__trans phrase="Position">"><mt:ContentFieldValue></mt:ContentField></p>
+                      <p class="name"><mt:ContentField content_field="<__trans phrase="Speaker Name">"><mt:ContentFieldValue></mt:ContentField></p>
+                      <p class="profile"><mt:ContentField content_field="<__trans phrase="Profile">"><mt:ContentFieldValue></mt:ContentField></p>
+                    </div>
+                  </li>
+                </mt:ContentField>
+                </ul>
+              </div>
+            </mt:If>
+
+            <mt:ContentField content_field="<__trans phrase="Programs">">
+              <div class="event-program">
+                <h2 class="subtitle-with-border"><span><__trans phrase="Programs"></span></h2>
+                <div class="event-program-list">
+                  <mt:ContentField content_field="<__trans phrase="Programs">"><mt:ContentFieldValue></mt:ContentField>
+                </div>
+              </div>
+              <mt:Else>
+            </mt:ContentField>
+
+              <div class="socialbtns">
+                <mt:Include module="social-buttons">
+              </div>
+
+              <div class="entry-navi group">
+                <mt:ContentPrevious><a href="<mt:ContentPermalink>" class="prev"><__trans phrase="Previous"></a></mt:ContentPrevious>
+                <mt:ContentNext><a href="<mt:ContentPermalink>" class="next"><__trans phrase="Next"></a></mt:ContentNext>
+              </div>
+
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /.content-main -->
+
+</div><!-- /.content -->
+
+<mt:Include module="<__trans phrase="footer">">
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="<mt:SiteURL encode_html="1">js/jquery.matchHeight-min.js"></script>
+<script src="<mt:SiteURL encode_html="1">js/common.js"></script>
+<script>
+  $('.entrylist03-index li').matchHeight();
+</script>
+
+</body>
+</html>

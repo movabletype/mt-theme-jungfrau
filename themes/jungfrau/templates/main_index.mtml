@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <title><mt:SiteName encode_html="1"></title>
 <meta name="description" content="<mt:SiteDescription remove_html="1" encode_html="1" strip_linefeeds="1">">
-<meta name="keywords" content="Jungfrau,Movable Type,テーマ,CMS">
+<meta name="keywords" content="<__translate phrase="__THEME_KEYWORDS__">">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <mt:Assets tag="@SITE_FAVICON" limit="1"><link rel="shortcut icon" href="<mt:AssetUrl encode_html="1">"></mt:Assets>
 <meta property="og:type" content="website">
-<meta property="og:locale" content="ja_JP">
+<meta property="og:locale" content="<__trans phrase="__OG_LOCALE__">">
 <meta property="og:title" content="<mt:SiteName encode_html="1">">
 <meta property="og:url" content="<mt:SiteURL encode_html="1">">
 <meta property="og:description" content="<mt:SiteDescription remove_html="1" encode_html="1" strip_linefeeds="1">">
@@ -27,7 +27,7 @@
 
 <div class="keyvisual">
   <div class="keyvisual-image">
-    <mt:Include module="header">
+    <mt:Include module="<__trans phrase="header">">
     <div class="keyvisual-title keyvisual-title-top">
       <div class="keyvisual-title-logo"><img src="<mt:If name="logo"><mt:Var name="logo"><mt:Else><mt:SiteURL>images/logo.png</mt:If>" alt="Jungfrau"></div>
       <p class="keyvisual-title-description text-smaller"><mt:SiteDescription></p>
@@ -38,75 +38,73 @@
 <div class="content">
   <div class="content-main">
 
-  <mt:Contents content_type="ニュース" lastn="5">
+  <mt:Contents content_type="News" limit="5">
   <mt:ContentsHeader>
     <section class="content-section">
       <div class="inner">
         <div class="content-section-box">
           <div class="inner">
             <div class="content-section-title">
-              <h2 class="content-section-title-ja">ニュース</h2>
-              <small class="content-section-title-en">NEWS</small>
+              <h2><__trans phrase="News"></h2>
             </div>
             <div class="entrylist01-index">          
               <ul>
   </mt:ContentsHeader>
                 <li>
-                  <div class="entry-date text-smaller"><mt:ContentDate format="%Y.%m.%d"></div>
+                  <div class="entry-date text-smaller"><mt:ContentDate format="<__trans phrase="__JUNGFRAU_DATE__">"></div>
                   <div class="entry-category">
-                    <mt:ContentField content_field="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:CategoryLabel></a></mt:ContentField>
+                    <mt:ContentField content_field="Category"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:CategoryLabel></a></mt:ContentField>
                   </div>
                   <div class="entry-title">
-                    <a href="<mt:ContentPermaLink>"><mt:ContentField label="タイトル"><mt:ContentFieldValue></mt:ContentField></a>
+                    <a href="<mt:ContentPermaLink>"><mt:ContentField label="<__trans phrase="Title">"><mt:ContentFieldValue></mt:ContentField></a>
                   </div>
                 </li>
   <mt:ContentsFooter>
               </ul>
             </div>
           </div>
-          <a href="<mt:SiteURL>news/" class="content-section-btn text-smaller">ニュース TOP</a>
+          <a href="<mt:SiteURL>news/" class="content-section-btn text-smaller"><__trans phrase="__GO_TO_NEWS__"></a>
         </div>
       </div>
     </section>
   </mt:ContentsFooter>
   </mt:Contents>
 
-  <mt:Contents content_type="プレスリリース" lastn="4">
+  <mt:Contents content_type="Press Release" limit="4">
   <mt:ContentsHeader>
     <section class="content-section">
       <div class="inner">
         <div class="content-section-box">
           <div class="inner">
             <div class="content-section-title">
-              <h2 class="content-section-title-ja">プレスリリース</h2>
-              <small class="content-section-title-en">PRESS RELEASE</small>
+              <h2><__trans phrase="Press Release"></h2>
             </div>
             <div class="entrylist02-index">
               <ul class="group">
   </mt:ContentsHeader>
-                <mt:ContentField label="メイン画像">
+                <mt:ContentField label="<__trans phrase="Main visual">">
                   <mt:SetVarBlock name="image_width"><mt:AssetProperty property="image_width"></mt:SetVarblock>
                   <mt:SetVarBlock name="image_height"><$mt:AssetProperty property="image_height"></mt:SetVarblock>
                 </mt:ContentField>
                 <li>
-                  <figure<mt:ContentField content_field="メイン画像"><mt:If name="image_width" gt="$image_height"> class="horizontal"<mt:Else> class="vertical"</mt:If><mt:Else> class="is-noimage"</mt:ContentField>>
+                  <figure<mt:ContentField content_field="<__trans phrase="Main Image">">><mt:If name="image_width" gt="$image_height"> class="horizontal"<mt:Else> class="vertical"</mt:If><mt:Else> class="is-noimage"</mt:ContentField>>
                     <a href="<mt:ContentPermaLink>">
-                      <img src="<mt:ContentField content_field="メイン画像"><mt:AssetURL><mt:Else><mt:SiteURL>images/noimage.png</mt:ContentField>" alt="<mt:ContentField content_field="タイトル"><mt:ContentFieldValue></mt:ContentField>">
+                      <img src="<mt:ContentField content_field="<__trans phrase="Main Image">"><mt:AssetURL><mt:Else><mt:SiteURL>images/noimage.png</mt:ContentField>" alt="<mt:ContentField content_field="<__trans phrase="Title">"><mt:ContentFieldValue></mt:ContentField>">
                     </a>
                   </figure>
                   <div class="entry-meta group">
-                    <div class="entry-date text-smaller"><mt:ContentDate format="%Y.%m.%d"></div>
-                    <div class="entry-category"><mt:ContentField content_field="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:CategoryLabel></a></mt:ContentField></div>
+                    <div class="entry-date text-smaller"><mt:ContentDate format="<__trans phrase="__JUNGFRAU_DATE__">"></div>
+                    <div class="entry-category"><mt:ContentField content_field="Category"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:CategoryLabel></a></mt:ContentField></div>
                   </div>
                   <div class="entry-title">
-                    <a href="<mt:ContentPermalink>"><mt:ContentField content_field="タイトル"><mt:ContentFieldValue></mt:ContentField></a>
+                    <a href="<mt:ContentPermalink>"><mt:ContentField content_field="<__trans phrase="Title">"><mt:ContentFieldValue></mt:ContentField></a>
                   </div>
                 </li>
   <mt:ContentsFooter>
               </ul>
             </div>
           </div>
-          <a href="<mt:SiteURL>pressrelease/" class="content-section-btn text-smaller">プレスリリース TOP</a>
+          <a href="<mt:SiteURL>pressrelease/" class="content-section-btn text-smaller"><__trans phrase="__GO_TO_PRESS_RELEASE__"></a>
         </div>
       </div>
     </section>
@@ -128,40 +126,39 @@
     </section>
   </mt:If>
 
-  <mt:Contents content_type="イベント・セミナー" lastn="3">
+  <mt:Contents content_type="Events and Seminars" limit="3">
   <mt:ContentsHeader>
     <section class="content-section">
       <div class="inner">
         <div class="content-section-box">
           <div class="inner">
             <div class="content-section-title">
-              <h2 class="content-section-title-ja">イベント・セミナー</h2>
-              <small class="content-section-title-en">EVENT / SEMINAR</small>
+              <h2><__trans phrase="Events and Seminars"></h2>
             </div>
             <div class="entrylist03-index">
               <ul class="group">
   </mt:ContentsHeader>
-                <mt:ContentField content_field="メイン画像">
+                <mt:ContentField content_field="<__trans phrase="Main Image">">
                   <mt:SetVarBlock name="image_width"><mt:AssetProperty property="image_width"></mt:SetVarblock>
                   <mt:SetVarBlock name="image_height"><$mt:AssetProperty property="image_height"></mt:SetVarblock>
                 </mt:ContentField>
                 <li>
-                  <figure<mt:ContentField content_field="メイン画像"><mt:If name="image_width" gt="$image_height"> class="horizontal"<mt:Else> class="vertical"</mt:If><mt:Else> class="is-noimage"</mt:ContentField>>
+                  <figure<mt:ContentField content_field="<__trans phrase="Main Image">"><mt:If name="image_width" gt="$image_height"> class="horizontal"<mt:Else> class="vertical"</mt:If><mt:Else> class="is-noimage"</mt:ContentField>>
                     <a href="<mt:ContentPermaLink>">
-                      <img src="<mt:ContentField content_field="メイン画像"><mt:AssetURL><mt:Else><mt:SiteURL>images/noimage.png</mt:ContentField>" alt="<mt:ContentField content_field="タイトル"><mt:ContentFieldValue></mt:ContentField>">
+                      <img src="<mt:ContentField content_field="<__trans phrase="Main Image">"><mt:AssetURL><mt:Else><mt:SiteURL>images/noimage.png</mt:ContentField>" alt="<mt:ContentField content_field="<__trans phrase="Title">"><mt:ContentFieldValue></mt:ContentField>">
                     </a>
                   </figure>
                   <div class="entry-meta group">
-                    <div class="entry-date text-smaller"><mt:ContentDate format="%Y.%m.%d"></div>
-                    <div class="entry-category"><mt:ContentField content_field="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:CategoryLabel></a></mt:ContentField></div>
+                    <div class="entry-date text-smaller"><mt:ContentDate format="<__trans phrase="__JUNGFRAU_DATE__">"></div>
+                    <div class="entry-category"><mt:ContentField content_field="Category"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:CategoryLabel></a></mt:ContentField></div>
                   </div>
                   <div class="entry-title">
-                    <a href="<mt:ContentPermalink>"><mt:ContentField content_field="タイトル"><mt:ContentFieldValue></mt:ContentField></a>
+                    <a href="<mt:ContentPermalink>"><mt:ContentField content_field="<__trans phrase="Title">"><mt:ContentFieldValue></mt:ContentField></a>
                   </div>
-                  <mt:SetVarBlock name="event_tags"><mt:ContentField content_field="タグ"><mt:TagName></mt:ContentField></mt:SetVarBlock>
+                  <mt:SetVarBlock name="event_tags"><mt:ContentField content_field="<__trans phrase="Tags">"><mt:TagName></mt:ContentField></mt:SetVarBlock>
                   <mt:If name="event_tags">
                   <div class="labels">
-                  <mt:ContentField content_field="タグ">
+                  <mt:ContentField content_field="<__trans phrase="Tags">">
                     <a class="label tag text-xsmaller"><mt:TagName></a>
                   </mt:ContentField>
                   </div>
@@ -171,7 +168,7 @@
               </ul>
             </div>
           </div>
-          <a href="<mt:SiteURL>event/" class="content-section-btn text-smaller">イベント・セミナー TOP</a>
+          <a href="<mt:SiteURL>event/" class="content-section-btn text-smaller"><__trans phrase="__GO_TO_EVENTS_AND_SEMINARS__"></a>
         </div>
       </div>
     </section>
@@ -196,7 +193,7 @@
   </div><!-- /.content-main -->
 </div><!-- /.content -->
 
-<mt:Include module="footer">
+<mt:Include module="<__trans phrase="footer">">
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="<mt:SiteURL encode_html="1">js/common.js"></script>
