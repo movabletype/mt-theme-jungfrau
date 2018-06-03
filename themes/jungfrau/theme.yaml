@@ -1,4 +1,7 @@
---- 
+id: jungfrau
+label: Jungfrau
+name: Jungfrau
+version: 1.0
 author_link: http://www.movabletype.org/
 author_name: Six Apart, Ltd.
 class: both
@@ -6,72 +9,72 @@ description: Jungfrau（ユングフラウ） は Movable Type 7 のテーマで
 thumbnail_file: 'thumb.png'
 thumbnail_file_medium: 'thumb-medium.png'
 thumbnail_file_small: 'thumb-small.png'
-elements: 
-  blog_static_files: 
+elements:
+  blog_static_files:
     component: ~
-    data: 
+    data:
       - images
     importer: blog_static_files
-  template_set: 
+  template_set:
     component: ~
-    data: 
+    data:
       base_path: templates
       label: exported_template set
-      templates: 
-        index: 
-          main_index: 
+      templates:
+        index:
+          main_index:
             label: TOP
             outfile: index.html
             rebuild_me: 1
-          styles: 
+          styles:
             label: style.css
             outfile: css/style.css
             rebuild_me: 1
-          template_451: 
+          template_451:
             label: common.js
             outfile: js/common.js
             rebuild_me: 1
-          template_452: 
+          template_452:
             label: jquery.matchHeight-min.js
             outfile: js/jquery.matchHeight-min.js
             rebuild_me: 1
-          template_454: 
+          template_454:
             label: reset.css
             outfile: css/reset.css
             rebuild_me: 1
-          template_455: 
+          template_455:
             label: ニュース TOP
             outfile: news/index.html
             rebuild_me: 1
-          template_667: 
+          template_667:
             label: プレスリリース　TOP
             outfile: pressrelease/index.html
             rebuild_me: 1
-          template_672: 
+          template_672:
             label: イベント・セミナー　TOP
             outfile: event/index.html
             rebuild_me: 1
-        module: 
-          template_448: 
+        module:
+          template_448:
             label: footer
-          template_449: 
+          template_449:
             label: header
-          template_450: 
+          template_450:
             label: sidemenu-news
-          template_660: 
+          template_660:
             label: social-buttons
-          template_670: 
+          template_670:
             label: sidemenu-pressrelease
-        page: 
-          template_731: 
+        page:
+          template_731:
             label: ウェブページ
-            mappings: 
-              page: 
+            mappings:
+              page:
                 archive_type: Page
                 file_template: "%-c/%-f"
                 preferred: 1
-        ct: 
-          template_727: 
+        ct:
+          template_727:
             label: イベント　記事
             content_type: イベント・セミナー
             mappings:
@@ -80,7 +83,7 @@ elements:
                 file_template: event/%y/%m/%-f
                 build_type: 1
                 preferred: 1
-          template_659: 
+          template_659:
             label: ニュース　記事
             content_type: ニュース
             mappings:
@@ -89,7 +92,7 @@ elements:
                 file_template: news/%y/%m/%-f
                 build_type: 1
                 preferred: 1
-          template_668: 
+          template_668:
             label: プレスリリース　記事
             content_type: プレスリリース
             mappings:
@@ -99,7 +102,7 @@ elements:
                 build_type: 1
                 preferred: 1
         ct_archive:
-          template_725: 
+          template_725:
             label: イベント・セミナー　カテゴリ
             content_type: イベント・セミナー
             mappings:
@@ -109,7 +112,7 @@ elements:
                 build_type: 1
                 preferred: 1
                 category_field: カテゴリ
-          template_726: 
+          template_726:
             label: イベント・セミナー　年別
             content_type: イベント・セミナー
             mappings:
@@ -118,7 +121,7 @@ elements:
                 file_template: event/%y/%i
                 build_type: 1
                 preferred: 1
-          template_603: 
+          template_603:
             label: ニュース　カテゴリ
             content_type: ニュース
             mappings:
@@ -128,7 +131,7 @@ elements:
                 build_type: 1
                 preferred: 1
                 category_field: カテゴリ
-          template_604: 
+          template_604:
             label: ニュース　年別
             content_type: ニュース
             mappings:
@@ -137,7 +140,7 @@ elements:
                 file_template: news/%y/%i
                 build_type: 1
                 preferred: 1
-          template_669: 
+          template_669:
             label: プレスリリース　カテゴリ
             content_type: プレスリリース
             mappings:
@@ -147,7 +150,7 @@ elements:
                 build_type: 1
                 preferred: 1
                 category_field: カテゴリ
-          template_1026: 
+          template_1026:
             label: プレスリリース　年別
             content_type: プレスリリース
             mappings:
@@ -156,18 +159,18 @@ elements:
                 file_template: pressrelease/%y/%i
                 build_type: 1
                 preferred: 1
-        system: 
-          comment_listing: 
+        system:
+          comment_listing:
             label: コメント一覧
-          comment_preview: 
+          comment_preview:
             label: コメントプレビュー
-          comment_response: 
+          comment_response:
             label: コメント完了
-          dynamic_error: 
+          dynamic_error:
             label: ダイナミックパブリッシングエラー
-          popup_image: 
+          popup_image:
             label: ポップアップ画像
-          search_results: 
+          search_results:
             label: 検索結果
     importer: template_set
   default_category_sets:
@@ -512,7 +515,3 @@ elements:
             allow_upload: 1
             max: ~
             min: ~
-id: jungfrau
-label: Jungfrau
-name: Jungfrau
-version: '0.01'
