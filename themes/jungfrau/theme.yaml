@@ -121,6 +121,7 @@ elements:
                 file_template: event/%y/%i
                 build_type: 1
                 preferred: 1
+                datetime_field: 開催日時
           template_603:
             label: ニュース　カテゴリ
             content_type: ニュース
@@ -449,7 +450,7 @@ elements:
             label: 開催日時
             description: ~
             display: default
-            required: 0
+            required: 1
             initial_value: ~
           - type: date_and_time
             label: 終了日時
