@@ -2,21 +2,21 @@
 <html lang="ja" itemscope itemtype="http://schema.org/WebPage">
 <head>
 <meta charset="UTF-8">
-<title>プレスリリース | <mt:SiteName encode_html="1"></title>
-<meta name="description" content="<mt:SiteName encode_html="1">のプレスリリースはこちらをご覧ください。">
-<meta name="keywords" content="Jungfrau,Movable Type,テーマ,CMS,プレスリリース">
+<title><__trans phrase="Press Releases"> | <mt:SiteName encode_html="1"></title>
+<meta name="description" content="<__trans phrase="All press releases announced on the [_1]." params="<mt:SiteName encode_html="1" encode_html="1">">">
+<meta name="keywords" content="<__trans phrase="__THEME_PRESS_RELEASE_KEYWORDS__">">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <mt:Assets tag="@SITE_FAVICON" limit="1"><link rel="shortcut icon" href="<mt:AssetUrl encode_html="1">"></mt:Assets>
 <meta property="og:type" content="website">
-<meta property="og:locale" content="ja_JP">
-<meta property="og:title" content="プレスリリース | <mt:SiteName encode_html="1">">
+<meta property="og:locale" content="<__trans phrase="__OG_LOCALE__">">
+<meta property="og:title" content="<__trans phrase="Press Releases"> | <mt:SiteName encode_html="1">">
 <meta property="og:url" content="<mt:SiteURL encode_html="1">news/">
-<meta property="og:description" content="<mt:SiteName encode_html="1">のプレスリリースはこちらをご覧ください。">
+<meta property="og:description" content="<__trans phrase="All press releases announced on the [_2]." params="<mt:SiteName encode_html="1" encode_html="1">">">
 <meta property="og:site_name" content="<mt:SiteName encode_html="1">">
 <mt:Assets type="image" tag="@OG_IMAGE" limit="1"><meta property="og:image" content="<mt:AssetUrl encode_html="1">"></mt:Assets>
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="プレスリリース | <mt:SiteName encode_html="1">">
-<meta name="twitter:description" content="<mt:SiteName encode_html="1">のプレスリリースはこちらをご覧ください。">
+<meta name="twitter:title" content="<__trans phrase="Press Releases"> | <mt:SiteName encode_html="1">">
+<meta name="twitter:description" content="<__trans phrase="All press releases announced on the [_2]." params="<mt:SiteName encode_html="1" encode_html="1">">">
 <mt:Assets type="image" tag="@OG_IMAGE" limit="1"><meta name="twitter:image" content="<mt:AssetUrl encode_html="1">"></mt:Assets>
 <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css">
 <link rel="stylesheet" href="<mt:SiteURL encode_html="1">css/reset.css">
@@ -27,10 +27,10 @@
 
 <div class="keyvisual">
   <div class="keyvisual-image">
-    <mt:Include module="header">
+    <mt:Include module="<__trans phrase="header">">
     <div class="keyvisual-title keyvisual-title-lower">
-      <h1 class="keyvisual-lower-title">プレスリリース</h1>
-      <p class="keyvisual-title-description text-smaller"><mt:SiteName encode_html="1">のプレスリリースはこちらをご覧ください。</p>
+      <h1 class="keyvisual-lower-title"><__trans phrase="Press Releases"></h1>
+      <p class="keyvisual-title-description text-smaller"><__trans phrase="All press releases announced on the [_2]." params="<mt:SiteName encode_html="1" encode_html="1">"></p>
     </div>
   </div>
 </div><!-- /.keyvisual -->
@@ -44,23 +44,23 @@
           <div class="inner">
             <div class="entrylist02-index entrylist02-index-lower">
               <ul class="group">
-              <mt:Contents content_type="プレスリリース">
-                <mt:ContentField content_field="メイン画像">
+              <mt:Contents content_type="Press Release">
+                <mt:ContentField content_field="<__trans phrase="Main Image">">
                   <mt:SetVarBlock name="image_width"><mt:AssetProperty property="image_width"></mt:SetVarblock>
                   <mt:SetVarBlock name="image_height"><$mt:AssetProperty property="image_height"></mt:SetVarblock>
                 </mt:ContentField>
                 <li>
-                  <figure<mt:ContentField content_field="メイン画像"><mt:If name="image_width" gt="$image_height"> class="horizontal"<mt:Else> class="vertical"</mt:If><mt:Else> class="is-noimage"</mt:ContentField>>
+                  <figure<mt:ContentField content_field="<__trans phrase="Main Image">"><mt:If name="image_width" gt="$image_height"> class="horizontal"<mt:Else> class="vertical"</mt:If><mt:Else> class="is-noimage"</mt:ContentField>>
                     <a href="<mt:ContentPermaLink>">
-                      <img src="<mt:ContentField content_field="メイン画像"><mt:AssetURL><mt:Else><mt:SiteURL>images/noimage.png</mt:ContentField>" alt="<mt:ContentField content_field="タイトル"><mt:ContentFieldValue></mt:ContentField>">
+                      <img src="<mt:ContentField content_field="<__trans phrase="Main Image">"><mt:AssetURL><mt:Else><mt:SiteURL>images/noimage.png</mt:ContentField>" alt="<mt:ContentField content_field="<__trans phrase="Title">"><mt:ContentFieldValue></mt:ContentField>">
                     </a>
                   </figure>
                   <div class="entry-meta group">
-                    <div class="entry-date text-smaller"><mt:ContentDate format="%Y.%m.%d"></div>
-                    <div class="entry-category"><mt:ContentField content_field="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:CategoryLabel></a></mt:ContentField></div>
+                    <div class="entry-date text-smaller"><mt:ContentDate format="<__trans phrase="__JUNGFRAU_DATE__">"></div>
+                    <div class="entry-category"><mt:ContentField content_field="Category"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:CategoryLabel></a></mt:ContentField></div>
                   </div>
                   <div class="entry-title">
-                    <a href="<mt:ContentPermalink>"><mt:ContentField content_field="タイトル"><mt:ContentFieldValue></mt:ContentField></a>
+                    <a href="<mt:ContentPermalink>"><mt:ContentField content_field="<__trans phrase="Title">"><mt:ContentFieldValue></mt:ContentField></a>
                   </div>
                 </li>
               </mt:Contents>
@@ -79,7 +79,7 @@
 
 </div><!-- /.content -->
 
-<mt:Include module="footer">
+<mt:Include module="<__trans phrase="footer">">
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="<mt:SiteURL encode_html="1">js/jquery.matchHeight-min.js"></script>

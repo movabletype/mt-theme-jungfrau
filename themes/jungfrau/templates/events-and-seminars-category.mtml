@@ -3,21 +3,21 @@
 <html lang="ja" itemscope itemtype="http://schema.org/WebPage">
 <head>
 <meta charset="UTF-8">
-<title><mt:ArchiveTitle encode_html="1"> - イベント・セミナー | <mt:SiteName encode_html="1"></title>
-<meta name="description" content="<mt:SiteName encode_html="1">のイベント・セミナー。<mt:ArchiveTitle> の一覧です。">
-<meta name="keywords" content="Jungfrau,Movable Type,テーマ,CMS,イベント・セミナー">
+<title><__trans phrase="All events and seminars in [_1]." params="<mt:ArchiveTitle encode_html="1" encode_html="1">"> | <mt:SiteName encode_html="1"></title>
+<meta name="description" content="<__trans phrase="All events and seminars in [_1]." params="<mt:ArchiveTitle encode_html="1" encode_html="1">">">
+<meta name="keywords" content="<__trans phrase="__THEME_EVENT_KEYWORDS__">">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <mt:Assets tag="@SITE_FAVICON" limit="1"><link rel="shortcut icon" href="<mt:AssetUrl encode_html="1">"></mt:Assets>
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:title" content="<mt:ArchiveTitle encode_html="1"> - イベント・セミナー | <mt:SiteName encode_html="1">">
+<meta property="og:title" content="<__trans phrase="All events and seminars in [_1]." params="<mt:ArchiveTitle encode_html="1" encode_html="1">"> | <mt:SiteName encode_html="1">">
 <meta property="og:url" content="">
-<meta property="og:description" content="<mt:SiteName encode_html="1">のイベント・セミナー。<mt:ArchiveTitle> の一覧です。">
+<meta property="og:description" content="<__trans phrase="All events and seminars in [_1]." params="<mt:ArchiveTitle encode_html="1" encode_html="1">">">
 <meta property="og:site_name" content="<mt:SiteName encode_html="1">">
 <mt:Assets type="image" tag="@OG_IMAGE" limit="1"><meta property="og:image" content="<mt:AssetUrl encode_html="1">"></mt:Assets>
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="<mt:ArchiveTitle encode_html="1"> - イベント・セミナー | <mt:SiteName encode_html="1">">
-<meta name="twitter:description" content="<mt:SiteName encode_html="1">のイベント・セミナー。<mt:ArchiveTitle> の一覧です。">
+<meta name="twitter:title" content="<__trans phrase="All events and seminars in [_1]." params="<mt:ArchiveTitle encode_html="1" encode_html="1">"> | <mt:SiteName encode_html="1">">
+<meta name="twitter:description" content="<__trans phrase="All events and seminars in [_1]." params="<mt:ArchiveTitle encode_html="1" encode_html="1">">">
 <mt:Assets type="image" tag="@OG_IMAGE" limit="1"><meta name="twitter:image" content="<mt:AssetUrl encode_html="1">"></mt:Assets>
 <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css">
 <link rel="stylesheet" href="<mt:SiteURL encode_html="1">css/reset.css">
@@ -28,10 +28,10 @@
 
 <div class="keyvisual">
   <div class="keyvisual-image">
-    <mt:Include module="header">
+    <mt:Include module="<__trans phrase="header">">
     <div class="keyvisual-title keyvisual-title-lower">
-      <h1 class="keyvisual-lower-title">イベント・セミナー</h1>
-      <p class="keyvisual-title-description text-smaller"><mt:SiteName encode_html="1">のイベント・セミナー情報はこちらをご覧ください。</p>
+      <h1 class="keyvisual-lower-title"><__trans phrase="Events and seminars"></h1>
+      <p class="keyvisual-title-description text-smaller"><__trans phrase="All events and seminars in [_1]." params="<mt:ArchiveTitle encode_html="1" encode_html="1">"></p>
     </div>
   </div>
 </div><!-- /.keyvisual -->
@@ -43,13 +43,13 @@
       <div class="inner">
         <div class="content-section-box">
           <div class="inner">
-          <mt:Contents content_type="イベント・セミナー">
+          <mt:Contents content_type="Events and seminars">
           <mt:ContentsHeader>
             <mt:SetVarBlock name="event_categories"><mt:CategorySets><mt:ArchiveList type="ContentType-Category"><mt:ArchiveTitle></mt:ArchiveList></mt:CategorySets></mt:SetVarBlock>
             <mt:If name="event_categories">
             <div class="categorylist">
               <div class="categorylist-title">
-                カテゴリ
+                <__trans phrase="Category"> 
               </div>
               <ul class="categorylist-body">
               <mt:CategorySets>
@@ -61,31 +61,30 @@
               </ul>
             </div>
             </mt:If>
-            <h2 class="content-title-main"><mt:ArchiveTitle>一覧</h2>
             <div class="entrylist03-index entrylist03-index-lower">
               <ul class="group">
           </mt:ContentsHeader>
-                <mt:ContentField content_field="メイン画像">
+                <mt:ContentField content_field="<__trans phrase="Main Image">">
                   <mt:SetVarBlock name="image_width"><mt:AssetProperty property="image_width"></mt:SetVarblock>
                   <mt:SetVarBlock name="image_height"><$mt:AssetProperty property="image_height"></mt:SetVarblock>
                 </mt:ContentField>
                 <li>
-                  <figure<mt:ContentField content_field="メイン画像"><mt:If name="image_width" gt="$image_height"> class="horizontal"<mt:Else> class="vertical"</mt:If><mt:Else> class="is-noimage"</mt:ContentField>>
+                  <figure<mt:ContentField content_field="<__trans phrase="Main Image">"><mt:If name="image_width" gt="$image_height"> class="horizontal"<mt:Else> class="vertical"</mt:If><mt:Else> class="is-noimage"</mt:ContentField>>
                     <a href="<mt:ContentPermaLink>">
-                      <img src="<mt:ContentField content_field="メイン画像"><mt:AssetURL><mt:Else><mt:SiteURL>images/noimage.png</mt:ContentField>" alt="<mt:ContentField content_field="タイトル"><mt:ContentFieldValue></mt:ContentField>">
+                      <img src="<mt:ContentField content_field="<__trans phrase="Main Image">"><mt:AssetURL><mt:Else><mt:SiteURL>images/noimage.png</mt:ContentField>" alt="<mt:ContentField content_field="<__trans phrase="Title">"><mt:ContentFieldValue></mt:ContentField>">
                     </a>
                   </figure>
                   <div class="entry-meta group">
-                    <div class="entry-date text-smaller"><mt:ContentDate format="%Y.%m.%d"></div>
-                    <div class="entry-category"><mt:ContentField content_field="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:CategoryLabel></a></mt:ContentField></div>
+                    <div class="entry-date text-smaller"><mt:ContentDate format="<__trans phrase="__JUNGFRAU_DATE__">"></div>
+                    <div class="entry-category"><mt:ContentField content_field="Category"><a href="<mt:CategoryArchiveLink>" class="label category text-xsmaller"><mt:CategoryLabel></a></mt:ContentField></div>
                   </div>
                   <div class="entry-title">
-                    <a href="<mt:ContentPermalink>"><mt:ContentField content_field="タイトル"><mt:ContentFieldValue></mt:ContentField></a>
+                    <a href="<mt:ContentPermalink>"><mt:ContentField content_field="<__trans phrase="Title">"><mt:ContentFieldValue></mt:ContentField></a>
                   </div>
-                  <mt:SetVarBlock name="event_tags"><mt:ContentField content_field="タグ"><mt:TagName></mt:ContentField></mt:SetVarBlock>
+                  <mt:SetVarBlock name="event_tags"><mt:ContentField content_field="<__trans phrase="Tag">"><mt:TagName></mt:ContentField></mt:SetVarBlock>
                   <mt:If name="event_tags">
                   <div class="labels">
-                  <mt:ContentField content_field="タグ">
+                  <mt:ContentField content_field="<__trans phrase="Tag">">
                     <a class="label tag text-xsmaller"><mt:TagName></a>
                   </mt:ContentField>
                   </div>
@@ -99,13 +98,13 @@
           <mt:Ignore>
             <div class="pager">
               <ul>
-                <li class="prev"><a href="">prev</a></li>
+                <li class="prev"><a href=""><__trans phrase="Previous"></a></li>
                 <li><a href="">1</a></li>
                 <li><a href="">2</a></li>
                 <li><span>3</span></li>
                 <li><a href="">4</a></li>
                 <li><a href="">5</a></li>
-                <li class="next"><a href="">next</a></li>
+                <li class="next"><a href=""><__trans phrase="Next"></a></li>
               </ul>
             </div>
           </mt:Ignore>
@@ -118,7 +117,7 @@
 
 </div><!-- /.content -->
 
-<mt:Include module="footer">
+<mt:Include module="<__trans phrase="footer">">
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="<mt:SiteURL encode_html="1">js/jquery.matchHeight-min.js"></script>
