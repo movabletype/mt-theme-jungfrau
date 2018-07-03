@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja" itemscope itemtype="http://schema.org/WebPage">
+<head>
+<meta charset="UTF-8">
+<title><mt:ContentField content_field="タイトル"><mt:ContentFieldValue encode_html="1"></mt:ContentField> - プレスリリース | <mt:SiteName encode_html="1"></title>
+<meta name="description" content="<mt:ContentField content_field="概要"><mt:ContentFieldValue encode_html="1"></mt:ContentField>">
+<meta name="keywords" content="Jungfrau,Movable Type,テーマ,CMS,プレスリリース">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<mt:Assets tag="@SITE_FAVICON" limit="1"><link rel="shortcut icon" href="<mt:AssetUrl encode_html="1">"></mt:Assets>
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="<mt:ContentField content_field="タイトル"><mt:ContentFieldValue encode_html="1"></mt:ContentField> - プレスリリース | <mt:SiteName encode_html="1">">
+<meta property="og:url" content="<mt:ContentPermalink encode_html="1">">
+<meta property="og:description" content="<mt:ContentField content_field="概要"><mt:ContentFieldValue encode_html="1"></mt:ContentField>">
+<meta property="og:site_name" content="<mt:SiteName encode_html="1">">
+<meta property="og:image" content="<mt:ContentField content_field="og:image"><mt:AssetURL></mt:ContentField>">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<mt:ContentField content_field="タイトル"><mt:ContentFieldValue encode_html="1"></mt:ContentField> - プレスリリース | <mt:SiteName encode_html="1">">
+<meta name="twitter:description" content="<mt:ContentField content_field="概要"><mt:ContentFieldValue encode_html="1"></mt:ContentField>">
+<meta name="twitter:image" content="<mt:ContentField content_field="og:image"><mt:AssetURL></mt:ContentField>">
+<link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css">
+<link rel="stylesheet" href="<mt:SiteURL encode_html="1">css/reset.css">
+<link rel="stylesheet" href="<mt:SiteURL encode_html="1">css/style.css">
+</head>
+
+<body>
+
+<div class="keyvisual">
+  <div class="keyvisual-image">
+    <mt:Include module="header">
+    <div class="keyvisual-title keyvisual-title-lower">
+      <h1 class="keyvisual-lower-title">プレスリリース</h1>
+      <p class="keyvisual-title-description text-smaller"><mt:SiteName encode_html="1">のプレスリリースはこちらをご覧ください。</p>
+    </div>
+  </div>
+</div><!-- /.keyvisual -->
+
+<div class="content content-column2 group">
+  <div class="content-main">
+
+    <section class="content-section">
+      <div class="inner">
+        <div class="content-section-box">
+          <div class="inner">
+            <article class="entry">
+              <div class="entry-header group">
+                <div class="entry-date"><mt:ContentCreatedDate format="%Y.%m.%d"></div>
+                <div class="entry-category text-smaller">
+                  <mt:ContentField content_field="カテゴリ"><a href="<mt:CategoryArchiveLink>" class="label category"><mt:CategoryLabel></a></mt:ContentField>
+                </div>
+              </div>
+              <h1 class="entry-title"><mt:ContentField content_field="タイトル"><mt:ContentFieldValue></mt:ContentField></h1>
+              <div class="entry-mainimage">
+                <mt:ContentField content_field="メイン画像"><img src="<mt:AssetURL>" alt="<mt:ContentField content_field="タイトル"><mt:ContentFieldValue></mt:ContentField>"></mt:ContentField>
+              </div>
+              <div class="entry-body">
+                <mt:ContentField content_field="本文"><mt:ContentFieldValue></mt:ContentField>
+              </div>
+            
+            <mt:SetVarBlock name="pressrelease_asset"><mt:ContentField content_field="資料"><mt:AssetURL></mt:ContentField><mt:ContentField content_field="お問い合わせ"><mt:ContentFieldValue></mt:ContentField></mt:SetVarBlock>
+            <mt:SetVarBlock name="pressrelease_asset_document"><mt:ContentField content_field="資料"><mt:AssetURL></mt:ContentField></mt:SetVarBlock>
+            <mt:If name="pressrelease_asset">
+              <div class="entry-bottom-buttons">
+                <mt:ContentField content_field="資料"><a href="<mt:AssetURL>" class="btn btn-large">資料ダウンロード</a></mt:ContentField>
+                <mt:ContentField content_field="お問い合わせ"><a href="<mt:ContentFieldValue>" class="btn btn-large btn-primary">お問い合わせ</a></mt:ContentField>
+              </div>
+            </mt:If>
+
+              <div class="socialbtns">
+                <mt:Include module="social-buttons">
+              </div>
+
+              <div class="entry-navi group">
+                <mt:ContentPrevious><a href="<mt:ContentPermalink>" class="prev">前の記事</a></mt:ContentPrevious>
+                <mt:ContentNext><a href="<mt:ContentPermalink>" class="next">次の記事</a></mt:ContentNext>
+              </div>
+
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /.content-main -->
+
+  <div class="content-side">
+    <mt:Include module="sidemenu-pressrelease">
+  </div><!-- /.content-side -->
+
+</div><!-- /.content -->
+
+<mt:include module="footer">
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="<mt:SiteURL encode_html="1">js/common.js"></script>
+
+</body>
+</html>

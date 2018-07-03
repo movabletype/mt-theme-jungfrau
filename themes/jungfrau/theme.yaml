@@ -5,14 +5,10 @@ version: 1.0
 author_link: http://www.movabletype.org/
 author_name: Six Apart, Ltd.
 class: both
-description: <__trans phrase="__JUNGFRAU_DESCRIPTION__">
+description: Jungfrau（ユングフラウ） は Movable Type 7 のテーマです。Content Type を利用したサイトの構築を体験いただけます。
 thumbnail_file: 'thumb.png'
 thumbnail_file_medium: 'thumb-medium.png'
 thumbnail_file_small: 'thumb-small.png'
-protected: 1
-l10n_lexicon:
-  en_us: l10n_en_us.yaml
-  ja: l10n_ja.yaml
 elements:
   blog_static_files:
     component: ~
@@ -34,71 +30,71 @@ elements:
             label: style.css
             outfile: css/style.css
             rebuild_me: 1
-          common_js:
+          template_451:
             label: common.js
             outfile: js/common.js
             rebuild_me: 1
-          jquery-matchHeight-min-js.mtml:
+          template_452:
             label: jquery.matchHeight-min.js
             outfile: js/jquery.matchHeight-min.js
             rebuild_me: 1
-          reset-css:
+          template_454:
             label: reset.css
             outfile: css/reset.css
             rebuild_me: 1
-          news-index:
-            label: News Index
+          template_455:
+            label: ニュース TOP
             outfile: news/index.html
             rebuild_me: 1
-          press-release-index:
-            label: Press Releases Index
-            outfile: pressreleases/index.html
+          template_667:
+            label: プレスリリース　TOP
+            outfile: pressrelease/index.html
             rebuild_me: 1
-          events-and-seminars-index:
-            label: Events and seminars Index
-            outfile: events/index.html
+          template_672:
+            label: イベント・セミナー　TOP
+            outfile: event/index.html
             rebuild_me: 1
         module:
-          footer:
+          template_448:
             label: footer
-          header:
+          template_449:
             label: header
-          sidemenu-news:
+          template_450:
             label: sidemenu-news
-          social-buttons:
+          template_660:
             label: social-buttons
-          sidemenu-pressrelease:
+          template_670:
             label: sidemenu-pressrelease
         page:
-          web-page:
-            label: Page
+          template_731:
+            label: ウェブページ
             mappings:
               page:
                 archive_type: Page
                 file_template: "%-c/%-f"
                 preferred: 1
         ct:
-          events-and-seminars:
-            label: Events and seminars
-            content_type: Events and seminars
+          template_727:
+            label: イベント　記事
+            content_type: イベント・セミナー
             mappings:
               ct:
                 archive_type: ContentType
                 file_template: event/%y/%m/%-f
                 build_type: 1
                 preferred: 1
-          news:
-            label: News
-            content_type: News
+          template_659:
+            label: ニュース　記事
+            content_type: ニュース
             mappings:
               ct:
                 archive_type: ContentType
                 file_template: news/%y/%m/%-f
                 build_type: 1
                 preferred: 1
-          press-release:
-            label: Press Release
-            content_type: Press Release
+          template_668:
+            label: プレスリリース　記事
+            content_type: プレスリリース
             mappings:
               ct:
                 archive_type: ContentType
@@ -106,110 +102,108 @@ elements:
                 build_type: 1
                 preferred: 1
         ct_archive:
-          events-and-seminars-category:
-            label: Category Archive - Events and Seminars
-            content_type: Events and seminars
+          template_725:
+            label: イベント・セミナー　カテゴリ
+            content_type: イベント・セミナー
             mappings:
               ct_cat:
                 archive_type: ContentType-Category
                 file_template: event/%-c/%i
                 build_type: 1
                 preferred: 1
-                category_field: Category
-          events-and-seminar-yearly:
-            label: Yearly Archive - Events and Seminars
-            content_type: Events and seminars
+                category_field: カテゴリ
+          template_726:
+            label: イベント・セミナー　年別
+            content_type: イベント・セミナー
             mappings:
               ct_datetime:
                 archive_type: ContentType-Yearly
                 file_template: event/%y/%i
                 build_type: 1
                 preferred: 1
-                datetime_field: Event Date
-          news-category:
-            label: Category Archive - News
-            content_type: News
+                datetime_field: 開催日時
+          template_603:
+            label: ニュース　カテゴリ
+            content_type: ニュース
             mappings:
               ct_cat:
                 archive_type: ContentType-Category
                 file_template: news/%-c/%i
                 build_type: 1
                 preferred: 1
-                category_field: Category
-          news-yearly:
-            label: Yearly Archive - News
-            content_type: News
+                category_field: カテゴリ
+          template_604:
+            label: ニュース　年別
+            content_type: ニュース
             mappings:
               ct_datetime:
                 archive_type: ContentType-Yearly
                 file_template: news/%y/%i
                 build_type: 1
                 preferred: 1
-                datetime_field: Event Date
-          press-release-category:
-            label: Category Archive - Press Releases
-            content_type: Press Release
+          template_669:
+            label: プレスリリース　カテゴリ
+            content_type: プレスリリース
             mappings:
               ct_cat:
                 archive_type: ContentType-Category
                 file_template: pressrelease/%-c/%i
                 build_type: 1
                 preferred: 1
-                category_field: Category
-          press-release-yearly:
-            label: Yearly Archive - Press Releases
-            content_type: Press Release
+                category_field: カテゴリ
+          template_1026:
+            label: プレスリリース　年別
+            content_type: プレスリリース
             mappings:
               ct_datetime:
                 archive_type: ContentType-Yearly
                 file_template: pressrelease/%y/%i
                 build_type: 1
                 preferred: 1
-                datetime_field: Event Date
         system:
           comment_listing:
-            label: Comment Listing
+            label: コメント一覧
           comment_preview:
-            label: Comment Preview
+            label: コメントプレビュー
           comment_response:
-            label: Comment Response
+            label: コメント完了
           dynamic_error:
-            label: Dynamic Error
+            label: ダイナミックパブリッシングエラー
           popup_image:
-            label: Popup Image
+            label: ポップアップ画像
           search_results:
-            label: Search Results
+            label: 検索結果
     importer: template_set
   default_category_sets:
     importer: default_category_sets
     data:
       event_and_seminar:
-        name: <__trans  phrase="Categories for events and seminars">
+        name: イベント・セミナー　カテゴリ
         categories:
           event:
-            label: Event
+            label: イベント
           seminar:
-            label: Seminar
+            label: セミナー
       news:
-        name: <__trans  phrase="Categories for news">
+        name: ニュース　カテゴリ
         categories:
           notices:
-            label: News
+            label: お知らせ
           events:
-            label: Event
+            label: イベント
           misc:
-            label: Others
+            label: その他
       press_release:
-        name: <__trans  phrase="Categories for press releases">
+        name: プレスリリース　カテゴリ
   default_content_types:
     importer: default_content_types
     data:
-      - name: News
+      - name: ニュース
         description: ~
         user_disp_option: 1
         fields:
           - type: single_line_text
-            label: <__trans phrase="Title">
+            label: タイトル
             description:
             display: force
             required: 1
@@ -218,27 +212,27 @@ elements:
             initial_value: ~
             data_label: 1
           - type: multi_line_text
-            label: <__trans phrase="Body">
-            description:
+            label: 本文
+            description: ニュースの本文
             display: optional
             input_format: 0
             required: 0
             initial_value: ~
           - type: multi_line_text
-            label: <__trans phrase="Description">
-            description: <__trans  phrase="Also used by og:description.">
+            label: 概要
+            description: ニュースの概要。og:descriptionとしても利用
             display: optional
             input_format: 0
             required: 0
             initial_value: ~
           - type: categories
-            label: <__trans phrase="Category">
-            description:
+            label: カテゴリ
+            description: ニュースのカテゴリ
             display: force
             required: 0
-            category_set: <__trans phrase="Categories for news">
+            category_set: ニュース　カテゴリ
           - type: asset_image
-            label: <__trans phrase="og:image">
+            label: og:image
             description: ~
             display: default
             required: 0
@@ -246,12 +240,12 @@ elements:
             allow_upload: 1
             max: ~
             min: ~
-      - name: Press Release
+      - name: プレスリリース
         description: ~
         user_disp_option: 1
         fields:
           - type: single_line_text
-            label: <__trans phrase="Title">
+            label: タイトル
             description: ~
             display: force
             required: 1
@@ -260,27 +254,27 @@ elements:
             initial_value: ~
             data_label: 1
           - type: multi_line_text
-            label: <__trans phrase="Body">
+            label: 本文
             description: ~
             display: optional
             input_format: 0
             required: 0
             initial_value: ~
           - type: multi_line_text
-            label: <__trans phrase="Description">
+            label: 概要
             description: ~
             display: optional
             input_format: 0
             required: 0
             initial_value: ~
           - type: categories
-            label: <__trans phrase="Category">
+            label: カテゴリ
             description: ~
             display: force
             required: 0
-            category_set: <__trans phrase="Categories for press release">
+            category_set: プレスリリース　カテゴリ
           - type: asset_image
-            label: <__trans phrase="og:image">
+            label: og:image
             description: ~
             display: default
             required: 0
@@ -289,7 +283,7 @@ elements:
             max: ~
             min: ~
           - type: asset
-            label: <__trans phrase="Material">
+            label: 資料
             description: ~
             display: default
             required: 0
@@ -298,11 +292,11 @@ elements:
             max: ~
             min: ~
           - type: url
-            label: <__trans phrase="Contact">
+            label: お問い合わせ
             description: ~
             initial_value: ~
           - type: asset_image
-            label: <__trans phrase="Main Image">
+            label: メイン画像
             description: ~
             display: default
             required: 0
@@ -310,12 +304,12 @@ elements:
             allow_upload: 1
             max: ~
             min: ~
-      - name: Venue
+      - name: 会場
         description: ~
         user_disp_option: 1
         fields:
           - type: single_line_text
-            label: <__trans phrase="Venue Name">
+            label: 会場名
             description: ~
             display: force
             required: 1
@@ -324,7 +318,7 @@ elements:
             initial_value: ~
             data_label: 1
           - type: single_line_text
-            label: <__trans phrase="Address">
+            label: 住所
             description: ~
             display: default
             required: 0
@@ -332,7 +326,7 @@ elements:
             max_length: ~
             initial_value: ~
           - type: single_line_text
-            label: <__trans phrase="Access">
+            label: アクセス
             description: ~
             display: default
             required: 0
@@ -340,16 +334,16 @@ elements:
             max_length: ~
             initial_value: ~
           - type: url
-            label: <__trans phrase="Site URL">
+            label: サイトURL
             description: ~
             initial_value: ~
             required: 0
-      - name: Speaker
+      - name: 講師
         description: ~
         user_disp_option: 1
         fields:
           - type: single_line_text
-            label: <__trans phrase="Speaker Name">
+            label: 講師名
             description: ~
             display: force
             required: 1
@@ -358,7 +352,7 @@ elements:
             initial_value: ~
             data_label: 1
           - type: single_line_text
-            label: <__trans phrase="Company Name">
+            label: 会社名
             description: ~
             display: default
             required: 0
@@ -366,7 +360,7 @@ elements:
             max_length: ~
             initial_value: ~
           - type: single_line_text
-            label: <__trans phrase="Position">
+            label: 役職
             description: ~
             display: default
             required: 0
@@ -374,14 +368,14 @@ elements:
             max_length: ~
             initial_value: ~
           - type: multi_line_text
-            label: <__trans phrase="__JUNGFRAU_PROFILE__">
+            label: プロフィール
             description: ~
             display: optional
             input_format: 0
             required: 0
             initial_value: ~
           - type: asset_image
-            label: <__trans phrase="Speaker Photo">
+            label: 講師画像
             description: ~
             display: default
             required: 0
@@ -389,12 +383,12 @@ elements:
             allow_upload: 1
             max: ~
             min: ~
-      - name: Events and Seminars
-        description:
+      - name: イベント・セミナー
+        description: イベント・セミナーの説明。イベント・セミナーの説明。イベント・セミナーの説明。
         user_disp_option: 1
         fields:
           - type: single_line_text
-            label: <__trans phrase="Title">
+            label: タイトル
             description: ~
             display: force
             required: 1
@@ -403,26 +397,26 @@ elements:
             initial_value: ~
             data_label: 1
           - type: multi_line_text
-            label: <__trans phrase="Body">
+            label: 本文
             description: ~
             display: optional
             input_format: 0
             required: 0
             initial_value: ~
           - type: multi_line_text
-            label: <__trans phrase="Price">
+            label: 参加費
             description: ~
             display: default
             input_format: 0
             required: 0
             initial_value: ~
           - type: list
-            label: <__trans phrase="Recommend To">
+            label: こんな方におすすめ
             description: ~
             display: optional
             required: 0
           - type: single_line_text
-            label: <__trans phrase="Promoter">
+            label: 主催
             description: ~
             display: default
             required: 0
@@ -430,20 +424,20 @@ elements:
             max_length: ~
             initial_value: ~
           - type: multi_line_text
-            label: <__trans phrase="Program">
+            label: プログラム
             description: ~
             display: optional
             input_format: blockeditor
             required: 0
             initial_value: ~
           - type: categories
-            label: <__trans phrase="Category">
+            label: カテゴリ
             description: ~
             display: force
             required: 0
-            category_set: <__trans phrase="Categories for events and seminars">
+            category_set: イベント・セミナー　カテゴリ
           - type: tags
-            label: <__trans phrase="Tag">
+            label: タグ
             description: ~
             display: optional
             required: 0
@@ -453,25 +447,25 @@ elements:
             max: 10
             initial_valuie: ~
           - type: date_and_time
-            label: Event Date
+            label: 開催日時
             description: ~
             display: default
             required: 1
             initial_value: ~
           - type: date_and_time
-            label: <__trans phrase="Event End Date">
+            label: 終了日時
             description: ~
             display: default
             required: 0
             initial_value: ~
           - type: time_only
-            label: <__trans phrase="Opening Time">
+            label: 開場時間
             description: ~
             display: default
             required: 0
             initial_value: ~
           - type: single_line_text
-            label: <__trans phrase="Note for Event Date">
+            label: 開催日時メモ
             description: ~
             display: optional
             required: 0
@@ -479,25 +473,25 @@ elements:
             max_length: ~
             initial_value: ~
           - type: content_type
-            label: <__trans phrase="Venue">
+            label: 会場
             description: ~
             display: default
             required: 0
-            source: Venue
+            source: 会場
             multiple: 0
             can_add: 0
           - type: content_type
-            label: <__trans phrase="Speaker">
+            label: 講師
             description: ~
             display: default
             required: 0
-            source: Speaker
+            source: 講師
             multiple: 1
             can_add: 1
             min: 0
             max: 20
           - type: number
-            label: <__trans phrase="Capacity">
+            label: 定員
             description: ~
             display: default
             required: 0
@@ -505,7 +499,7 @@ elements:
             max_value: ~
             initial_value: ~
           - type: asset_image
-            label: <__trans phrase="og:image">
+            label: og:image
             description: ~
             display: default
             required: 0
@@ -514,7 +508,7 @@ elements:
             max: ~
             min: ~
           - type: asset_image
-            label: <__trans phrase="Main Image">
+            label: メイン画像
             description: ~
             display: default
             required: 0
