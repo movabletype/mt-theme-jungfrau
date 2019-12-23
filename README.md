@@ -24,4 +24,4 @@ See [SUPPORT.TXT](SUPPORT.TXT)
 
 The following copyright notice applies to all the files provided in this distribution, including binary files, unless explicitly noted otherwise.
 
-Copyright 2017 Six Apart, Ltd.
+Copyright 2017 Six Apart Ltd.
