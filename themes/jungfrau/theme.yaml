@@ -3,7 +3,7 @@ label: Jungfrau
 name: Jungfrau
 version: '0.02'
 author_link: http://www.movabletype.org/
-author_name: Six Apart, Ltd.
+author_name: Six Apart Ltd.
 class: both
 description: <__trans phrase="__JUNGFRAU_DESCRIPTION__">
 thumbnail_file: 'thumb.png'
