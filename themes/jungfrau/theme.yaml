@@ -173,6 +173,8 @@ elements:
             label: ポップアップ画像
           search_results:
             label: 検索結果
+          cd_search_results:
+            label: コンテン検索結果
     importer: template_set
   default_category_sets:
     importer: default_category_sets
